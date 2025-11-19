@@ -245,6 +245,7 @@ GameObject:
   - component: {fileID: 210908156}
   - component: {fileID: 210908160}
   - component: {fileID: 210908161}
+  - component: {fileID: 210908162}
   m_Layer: 0
   m_Name: Capsule
   m_TagString: Untagged
@@ -358,10 +359,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57b9d78a48abe6e44bdd3db033ae7164, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Movement
-  movementSpeed: 5
   jumpForce: 5
   holdJumpForce: 0.6
-  maxholdtime: 1
+  maxHoldTime: 0.2
 --- !u!54 &210908161
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -389,6 +389,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 0
+--- !u!114 &210908162
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 210908155}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 772950b27d5d20047a419318be67ea75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CoinPickup
+  coins: 0
 --- !u!1 &1529772140
 GameObject:
   m_ObjectHideFlags: 0
@@ -602,13 +615,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1722989957}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.83, z: -10}
+  m_LocalRotation: {x: 0.16042992, y: -0.37686962, z: 0.06645224, w: 0.9098438}
+  m_LocalPosition: {x: 8.68678, y: 6.14, z: -0.65}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 20, y: -45, z: 0}
 --- !u!114 &1722989961
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -657,7 +670,7 @@ MonoBehaviour:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 1722989960}
   - {fileID: 1529772142}
   - {fileID: 192787090}
+  - {fileID: 1722989960}
   - {fileID: 210908159}
