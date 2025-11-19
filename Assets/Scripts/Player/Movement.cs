@@ -4,8 +4,12 @@ using UnityEngine;
 public class Movement : MonoBehaviour
 {
     [SerializeField] private float movementSpeed = 5f;
-    [SerializeField] private float JumpForce = 5f;
+    [SerializeField] private float jumpForce = 5f;
+    [SerializeField] private float holdJumpForce = 5f;
+    [SerializeField] private float maxholdtime = 5f;
 
+    private float jumpHoldTimer = 0f;
+    private bool isJumping = false;
     private Rigidbody rb;
 
      void Start()
@@ -24,10 +28,37 @@ public class Movement : MonoBehaviour
 
         transform.position += movement * Time.deltaTime;
 
+
         if (Input.GetKeyDown(KeyCode.Space) && IsGrounded()) 
         {
-         rb.AddForce(Vector3.up * JumpForce, ForceMode.Impulse);
+         rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+            isJumping = true;
+            jumpHoldTimer = 0f;
         }
+
+        if (Input.GetKey(KeyCode.Space) && isJumping)
+        {
+
+
+        if (jumpHoldTimer < maxholdtime)
+        { 
+            rb.AddForce(Vector3.up *  holdJumpForce, ForceMode.Acceleration);
+            jumpHoldTimer += Time.deltaTime;
+        }
+
+        else 
+        {
+            isJumping = !isJumping;
+        }
+
+
+        if (Input.GetKeyUp(KeyCode.Space))
+        { 
+            isJumping |= !isJumping;
+        }
+
+      }
+
     }
 
     private bool IsGrounded()

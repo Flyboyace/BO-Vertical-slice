@@ -358,6 +358,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57b9d78a48abe6e44bdd3db033ae7164, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Movement
+  movementSpeed: 5
+  jumpForce: 5
+  holdJumpForce: 0.6
+  maxholdtime: 1
 --- !u!54 &210908161
 Rigidbody:
   m_ObjectHideFlags: 0
