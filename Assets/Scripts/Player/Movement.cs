@@ -3,20 +3,35 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
-    private float movementSpeed = 5f;
-    private Vector3 movement;
+    [SerializeField] private float movementSpeed = 5f;
+    [SerializeField] private float JumpForce = 5f;
+
+    private Rigidbody rb;
+
+     void Start()
+    {
+        rb = GetComponent<Rigidbody>();
+    }
 
     void Update()
     {
         
         float horizontalInput = Input.GetAxis("Horizontal");
-        
-        float verticalInput = Input.GetAxis("Vertical");
 
-        movement = new Vector3(1, 0, 1);
+        float VerticalInput = Input.GetAxis("Vertical");
 
-        transform.position = transform.position + new Vector3(horizontalInput * movementSpeed * Time.deltaTime, 0 , verticalInput * movementSpeed * Time.deltaTime);
+        Vector3 movement = new Vector3 (horizontalInput, 0, VerticalInput) * movementSpeed;
 
-        Debug.Log(transform.position);
+        transform.position += movement * Time.deltaTime;
+
+        if (Input.GetKeyDown(KeyCode.Space) && IsGrounded()) 
+        {
+         rb.AddForce(Vector3.up * JumpForce, ForceMode.Impulse);
+        }
+    }
+
+    private bool IsGrounded()
+    {
+        return Physics.Raycast(transform.position, Vector3.down, 1.1f);
     }
 }
