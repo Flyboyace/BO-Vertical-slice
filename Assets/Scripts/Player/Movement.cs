@@ -79,7 +79,7 @@ public class Movement : MonoBehaviour
         Debug.Log(transform.position);
     }
 
-    private bool IsGrounded()
+    public bool IsGrounded()
     {
         return Physics.Raycast(transform.position, Vector3.down, 1.1f);
     }
