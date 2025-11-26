@@ -23,7 +23,6 @@ public class Groundpound : MonoBehaviour
 
     void Update()
     {
-        // --- Start ground pound ---
         if (!movement.IsGrounded() && !isGroundPounding && Input.GetKeyDown(KeyCode.LeftControl))
         {
             isGroundPounding = true;
@@ -35,7 +34,6 @@ public class Groundpound : MonoBehaviour
             );
         }
 
-        // --- Handle freeze timer ---
         if (isFreezing)
         {
             freezeTimer -= Time.deltaTime;
@@ -43,7 +41,7 @@ public class Groundpound : MonoBehaviour
             if (freezeTimer <= 0f)
             {
                 isFreezing = false;
-                rb.constraints = RigidbodyConstraints.FreezeRotation; // unfreeze movement
+                rb.constraints = RigidbodyConstraints.FreezeRotation; 
             }
         }
     }
@@ -58,7 +56,6 @@ public class Groundpound : MonoBehaviour
                 rb.linearVelocity.z
             );
 
-            // Landing
             if (movement.IsGrounded())
             {
                 isGroundPounding = false;
@@ -72,7 +69,6 @@ public class Groundpound : MonoBehaviour
         isFreezing = true;
         freezeTimer = landingFreezeTime;
 
-        // Freeze ALL movement (but allow rotation freeze)
         rb.constraints = RigidbodyConstraints.FreezePosition | RigidbodyConstraints.FreezeRotation;
     }
 }

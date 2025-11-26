@@ -26,7 +26,6 @@ public class Movement : MonoBehaviour
 
     void Update()
     {
-        // --- STOP ALL MOVEMENT DURING GROUNDPOUND FREEZE ---
         if (groundpound != null && groundpound.IsFrozen)
             return;
 
@@ -56,7 +55,6 @@ public class Movement : MonoBehaviour
             verticalInput * movementSpeed * speedMultiplier * Time.deltaTime
         );
 
-        // --- Jump ---
         if (Input.GetKeyDown(KeyCode.Space) && IsGrounded())
         {
             rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
