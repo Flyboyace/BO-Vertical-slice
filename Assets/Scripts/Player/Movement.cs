@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
-    private float movementSpeed = 5f;
+    [SerializeField] private float movementSpeed = 5f;
 
     [SerializeField] private float jumpForce = 8f;
     [SerializeField] private float holdJumpForce = 4f;
@@ -12,22 +12,27 @@ public class Movement : MonoBehaviour
     private bool isJumping = false;
     private Rigidbody rb;
 
-    
     private float runTimer = 0f;
     private float speedMultiplier = 1f;
     private float timeToSpeedBoost = 2.5f;
 
+    private Groundpound groundpound;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
+        groundpound = GetComponent<Groundpound>();
     }
 
     void Update()
     {
+        // --- STOP ALL MOVEMENT DURING GROUNDPOUND FREEZE ---
+        if (groundpound != null && groundpound.IsFrozen)
+            return;
+
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
 
-        
         bool isMoving = horizontalInput != 0 || verticalInput != 0;
 
         if (isMoving)
@@ -36,13 +41,13 @@ public class Movement : MonoBehaviour
 
             if (runTimer >= timeToSpeedBoost)
             {
-                speedMultiplier = 2f; 
+                speedMultiplier = 2f;
             }
         }
         else
         {
             runTimer = 0f;
-            speedMultiplier = 1f; 
+            speedMultiplier = 1f;
         }
 
         transform.position += new Vector3(
@@ -51,6 +56,7 @@ public class Movement : MonoBehaviour
             verticalInput * movementSpeed * speedMultiplier * Time.deltaTime
         );
 
+        // --- Jump ---
         if (Input.GetKeyDown(KeyCode.Space) && IsGrounded())
         {
             rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
@@ -75,8 +81,6 @@ public class Movement : MonoBehaviour
         {
             isJumping = false;
         }
-
-        Debug.Log(transform.position);
     }
 
     public bool IsGrounded()
