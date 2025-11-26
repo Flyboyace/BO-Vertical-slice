@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: df0a7c94acc70ef45aeb9e3fe79fe7e6
+guid: 0d6f38dde0842004890e8827e47514f6
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,79 +97,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Grey_Number_sprite_1
+      name: Coin
       rect:
         serializedVersion: 2
-        x: 55
-        y: 2761
-        width: 616
-        height: 860
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ee2e498a610cf8f429f7eaa14b7233f2
-      internalID: -1088399906
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Grey_Number_sprite_2
-      rect:
-        serializedVersion: 2
-        x: 720
-        y: 2761
-        width: 801
-        height: 877
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 93d1938434a2c4d44b44ea2a4095ea3f
-      internalID: 459931030
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Grey_Number_sprite_3
-      rect:
-        serializedVersion: 2
-        x: 1544
-        y: 2758
-        width: 834
-        height: 880
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 834f7dc6daabba44db5d1d8c14b21900
-      internalID: 1803564829
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Grey_Number_sprite_4
-      rect:
-        serializedVersion: 2
-        x: 2395
-        y: 2711
+        x: 541
+        y: 2430
         width: 830
-        height: 983
+        height: 1028
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -178,20 +112,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2698ea3a14985ea48a33191a329031a0
-      internalID: -1043256632
+      spriteID: c1b95f64d4f23b0418a04f74d2355a53
+      internalID: 751879057
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Grey_Number_sprite_5
+      name: Green_Star
       rect:
         serializedVersion: 2
-        x: 3242
-        y: 2695
-        width: 744
-        height: 893
+        x: 1417
+        y: 2496
+        width: 1084
+        height: 1054
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -200,20 +134,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 354b5e068a595064a98342504d67835e
-      internalID: -514452575
+      spriteID: 880f455777ae5924bbfaecd4f635dea5
+      internalID: 1083295847
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Grey_Number_sprite_6
+      name: Cross
       rect:
         serializedVersion: 2
-        x: 55
-        y: 1487
-        width: 768
-        height: 943
+        x: 2527
+        y: 2455
+        width: 1033
+        height: 993
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -222,20 +156,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 06340802d15cce7438c2f4817332cf5a
-      internalID: -58241243
+      spriteID: 6aec614660beb2446a3554c36958a99e
+      internalID: -790809984
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Grey_Number_sprite_7
+      name: Mario_3D_Assets_Goud_1
       rect:
         serializedVersion: 2
-        x: 833
-        y: 1504
-        width: 718
-        height: 929
+        x: 215
+        y: 1447
+        width: 616
+        height: 876
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -244,20 +178,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b7039b2d9b5fe0f419cc605732072cbd
-      internalID: -1941103120
+      spriteID: fde2e2b8f5401e54ebf88851c0c44e21
+      internalID: -643360202
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Grey_Number_sprite_8
+      name: Mario_3D_Assets_Goud_2
       rect:
         serializedVersion: 2
-        x: 1561
-        y: 1487
-        width: 853
-        height: 950
+        x: 857
+        y: 1442
+        width: 753
+        height: 891
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -266,20 +200,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: acaa764374e410d4db87ef5c898f9671
-      internalID: -1977526060
+      spriteID: 5bb645382953b4140a20d74aa9192ea0
+      internalID: 656200097
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Grey_Number_sprite_9
+      name: Mario_3D_Assets_Goud_3
       rect:
         serializedVersion: 2
-        x: 2424
-        y: 1480
-        width: 778
-        height: 960
+        x: 1636
+        y: 1463
+        width: 743
+        height: 890
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -288,19 +222,107 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 01e8a54f6354aba47a4d5360b17d24d2
-      internalID: -1068965906
+      spriteID: 835eb08c61f59ad4a994c91d85c83975
+      internalID: -18698332
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Grey_Number_sprite_0
+      name: Mario_3D_Assets_Goud_4
       rect:
         serializedVersion: 2
-        x: 3212
-        y: 1473
-        width: 846
+        x: 2394
+        y: 1412
+        width: 779
+        height: 931
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c73fdcce594422745b61b4239267f49f
+      internalID: 805785945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario_3D_Assets_Goud_5
+      rect:
+        serializedVersion: 2
+        x: 3188
+        y: 1407
+        width: 749
+        height: 896
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae2f33faad2bf7e4ea62276e52fe4b7a
+      internalID: -2085765157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario_3D_Assets_Goud_6
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 494
+        width: 725
+        height: 890
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c826b39295b0e9949bf667ebbf91c51a
+      internalID: -1438539613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario_3D_Assets_Goud_7
+      rect:
+        serializedVersion: 2
+        x: 881
+        y: 464
+        width: 698
+        height: 887
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d77be563d31e844aad57fefc8d8b954
+      internalID: 834086888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario_3D_Assets_Goud_8
+      rect:
+        serializedVersion: 2
+        x: 1605
+        y: 424
+        width: 795
         height: 933
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -310,20 +332,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d4cfdce32b6d62e42a122b440660477c
-      internalID: 1891326457
+      spriteID: dcac027c2e801f44488a75135f8527ff
+      internalID: 1085481850
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Grey_Number_sprites_Timer
+      name: Mario_3D_Assets_Goud_9
       rect:
         serializedVersion: 2
-        x: 1461
-        y: 319
-        width: 1025
-        height: 1044
+        x: 2416
+        y: 421
+        width: 768
+        height: 949
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -332,8 +354,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b80cdc3fc3dee454ea144adc170f9440
-      internalID: -2037819884
+      spriteID: 310da18dab37dcb478f7d50fa01c7f27
+      internalID: -1915111524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mario_3D_Assets_Goud_0
+      rect:
+        serializedVersion: 2
+        x: 3194
+        y: 401
+        width: 797
+        height: 973
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2dc02eea3a172d4bb3ae50113b7b32e
+      internalID: -378112233
       vertices: []
       indices: 
       edges: []
@@ -342,7 +386,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5eae5818370d5ad468c6de1d5bf3a128
+    spriteID: fd62d8ec3890d004197e0935e8ce9bc9
     internalID: 0
     vertices: []
     indices: 
@@ -352,17 +396,19 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Grey_Number_sprite_0: 1891326457
-      Grey_Number_sprite_1: -1088399906
-      Grey_Number_sprite_2: 459931030
-      Grey_Number_sprite_3: 1803564829
-      Grey_Number_sprite_4: -1043256632
-      Grey_Number_sprite_5: -514452575
-      Grey_Number_sprite_6: -58241243
-      Grey_Number_sprite_7: -1941103120
-      Grey_Number_sprite_8: -1977526060
-      Grey_Number_sprite_9: -1068965906
-      Grey_Number_sprites_Timer: -2037819884
+      Coin: 751879057
+      Cross: -790809984
+      Green_Star: 1083295847
+      Mario_3D_Assets_Goud_0: -378112233
+      Mario_3D_Assets_Goud_1: -643360202
+      Mario_3D_Assets_Goud_2: 656200097
+      Mario_3D_Assets_Goud_3: -18698332
+      Mario_3D_Assets_Goud_4: 805785945
+      Mario_3D_Assets_Goud_5: -2085765157
+      Mario_3D_Assets_Goud_6: -1438539613
+      Mario_3D_Assets_Goud_7: 834086888
+      Mario_3D_Assets_Goud_8: 1085481850
+      Mario_3D_Assets_Goud_9: -1915111524
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
