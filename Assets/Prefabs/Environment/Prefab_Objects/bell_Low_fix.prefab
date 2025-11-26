@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &493052485517668294
+--- !u!1001 &2154460862450537876
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -10,27 +10,27 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: eedeac5724943d64dbdbec326abf1d3f, type: 3}
       propertyPath: m_LocalScale.x
-      value: 7.725491
+      value: 22.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: eedeac5724943d64dbdbec326abf1d3f, type: 3}
       propertyPath: m_LocalScale.y
-      value: 7.725491
+      value: 22.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: eedeac5724943d64dbdbec326abf1d3f, type: 3}
       propertyPath: m_LocalScale.z
-      value: 7.725491
+      value: 22.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: eedeac5724943d64dbdbec326abf1d3f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 532.4312
+      value: 536.4082
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: eedeac5724943d64dbdbec326abf1d3f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 155.4
+      value: 122.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: eedeac5724943d64dbdbec326abf1d3f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -25.595
+      value: -42.939
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: eedeac5724943d64dbdbec326abf1d3f, type: 3}
       propertyPath: m_LocalRotation.w
@@ -71,11 +71,11 @@ PrefabInstance:
     - target: {fileID: 2659707414697153314, guid: eedeac5724943d64dbdbec326abf1d3f, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: c14f09bc7cd2c564c8ea5e0be0990d56, type: 2}
+      objectReference: {fileID: 2100000, guid: ca8fd852ab7df464eb606f4759a9b6b7, type: 2}
     - target: {fileID: 7775026660178662932, guid: eedeac5724943d64dbdbec326abf1d3f, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: c14f09bc7cd2c564c8ea5e0be0990d56, type: 2}
+      objectReference: {fileID: 2100000, guid: ca8fd852ab7df464eb606f4759a9b6b7, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
