@@ -2,15 +2,21 @@ using UnityEngine;
 
 public class CameraMovement : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    [Header("References")]
+    [SerializeField] private Transform playerPos;
+    [Header("Attributes")]
+    [SerializeField] private bool isOnCamEdge;
+
     void Start()
     {
-        
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (isOnCamEdge)
+        {
+
+        }
     }
 }

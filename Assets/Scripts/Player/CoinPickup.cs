@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 public class CoinPickup : MonoBehaviour
 {
     [SerializeField] private int coins;
+    [SerializeField] private int greenStar;
     void Start()
     {
         
@@ -26,6 +27,10 @@ public class CoinPickup : MonoBehaviour
     {
         coins += 1;
         Debug.Log("Coin count updated: " + coins);
+    }
+    private void GreenStar()
+    { 
+        
     }
 }
 
