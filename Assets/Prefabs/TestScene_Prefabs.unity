@@ -642,7 +642,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e823cd5b5d27c0f4b8256e7c12ee3e6d, type: 2}
+  - {fileID: 2100000, guid: 15279f130e941ce40bb3efd1abb81094, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -705,7 +705,7 @@ ParticleSystem:
   m_GameObject: {fileID: 1452857102}
   serializedVersion: 8
   lengthInSec: 5.1
-  simulationSpeed: 4.31
+  simulationSpeed: 3.74
   stopAction: 0
   cullingMode: 0
   ringBufferMode: 0
