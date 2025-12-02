@@ -16,32 +16,38 @@ public class Movement : MonoBehaviour
     private float speedMultiplier = 1f;
     private float timeToSpeedBoost = 2.5f;
 
+    private Vector3 inputDirection;
+
     private Groundpound groundpound;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
         groundpound = GetComponent<Groundpound>();
+
+        // IMPORTANT for preventing clipping
+        rb.freezeRotation = true;
+        rb.interpolation = RigidbodyInterpolation.Interpolate;
+        rb.collisionDetectionMode = CollisionDetectionMode.ContinuousDynamic;
     }
 
-    void Update()
+    private void Update()
     {
         if (groundpound != null && groundpound.IsFrozen)
             return;
 
-        float horizontalInput = Input.GetAxis("Horizontal");
-        float verticalInput = Input.GetAxis("Vertical");
+        // Get movement input
+        float h = Input.GetAxisRaw("Horizontal");
+        float v = Input.GetAxisRaw("Vertical");
 
-        bool isMoving = horizontalInput != 0 || verticalInput != 0;
+        inputDirection = new Vector3(h, 0, v).normalized;
 
-        if (isMoving)
+        // Speed boost logic
+        if (inputDirection.sqrMagnitude > 0.01f)
         {
             runTimer += Time.deltaTime;
-
             if (runTimer >= timeToSpeedBoost)
-            {
                 speedMultiplier = 2f;
-            }
         }
         else
         {
@@ -49,12 +55,20 @@ public class Movement : MonoBehaviour
             speedMultiplier = 1f;
         }
 
-        transform.position += new Vector3(
-            horizontalInput * movementSpeed * speedMultiplier * Time.deltaTime,
-            0,
-            verticalInput * movementSpeed * speedMultiplier * Time.deltaTime
-        );
+        HandleJumpInput();
+    }
 
+    private void FixedUpdate()
+    {
+        // Apply horizontal movement using velocity (no clipping)
+        Vector3 horizontalVelocity = inputDirection * movementSpeed * speedMultiplier;
+        Vector3 verticalVelocity = new Vector3(0, rb.linearVelocity.y, 0);
+
+        rb.linearVelocity = horizontalVelocity + verticalVelocity;
+    }
+
+    private void HandleJumpInput()
+    {
         if (Input.GetKeyDown(KeyCode.Space) && IsGrounded())
         {
             rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);

@@ -40,10 +40,6 @@ public class Climb : MonoBehaviour
         }
     }
 
-    // ---------------------------------------------
-    // Missing functions (now added)
-    // ---------------------------------------------
-
     void StartClimbing()
     {
         isClimbing = true;
