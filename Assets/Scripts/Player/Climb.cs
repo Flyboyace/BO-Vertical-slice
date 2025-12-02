@@ -2,12 +2,19 @@ using UnityEngine;
 
 public class Climb : MonoBehaviour
 {
+    [Header("Climb Settings")]
     public float climbSpeed = 3f;
     public float checkDistance = 1f;
     public LayerMask climbLayer;
+    public KeyCode climbKey = KeyCode.Space;
+
+    [Header("Ray Settings")]
+    public float rayHeight = 1.2f;
+    public float rayForwardOffset = 0.3f;
 
     private Rigidbody rb;
     private bool isClimbing = false;
+    private bool wallDetected = false;
 
     void Start()
     {
@@ -16,35 +23,47 @@ public class Climb : MonoBehaviour
 
     void Update()
     {
-        RaycastHit hit;
+        DetectWall();
 
-        if (Physics.Raycast(transform.position + Vector3.up * 1f,
-                            transform.forward,
-                            out hit,
-                            checkDistance,
-                            climbLayer))
+        if (wallDetected && Input.GetKey(climbKey))
         {
-            if (Input.GetKey(KeyCode.Space))
-            {
-                StartClimbing();
-            }
+            StartClimbing();
         }
         else
         {
             StopClimbing();
         }
+    }
 
+    void FixedUpdate()
+    {
         if (isClimbing)
         {
-            ClimbMovement();
+            transform.position += Vector3.up * climbSpeed * Time.fixedDeltaTime;
         }
+    }
+
+    void DetectWall()
+    {
+        Vector3 origin = transform.position +
+                         Vector3.up * rayHeight +
+                         transform.forward * rayForwardOffset;
+
+        RaycastHit hit;
+        wallDetected = Physics.Raycast(origin, transform.forward, out hit, checkDistance, climbLayer);
+
+        Debug.DrawRay(origin, transform.forward * checkDistance, wallDetected ? Color.green : Color.red);
     }
 
     void StartClimbing()
     {
-        isClimbing = true;
-        rb.useGravity = false;
-        rb.linearVelocity = Vector3.zero;
+        if (!isClimbing)
+        {
+            isClimbing = true;
+            rb.linearVelocity = Vector3.zero;
+            rb.useGravity = false;
+            rb.isKinematic = true;
+        }
     }
 
     void StopClimbing()
@@ -53,12 +72,7 @@ public class Climb : MonoBehaviour
         {
             isClimbing = false;
             rb.useGravity = true;
+            rb.isKinematic = false;
         }
     }
-
-    void ClimbMovement()
-    {
-        transform.position += Vector3.up * climbSpeed * Time.deltaTime;
-    }
 }
-

@@ -25,7 +25,6 @@ public class Movement : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         groundpound = GetComponent<Groundpound>();
 
-        // IMPORTANT for preventing clipping
         rb.freezeRotation = true;
         rb.interpolation = RigidbodyInterpolation.Interpolate;
         rb.collisionDetectionMode = CollisionDetectionMode.ContinuousDynamic;
@@ -36,13 +35,11 @@ public class Movement : MonoBehaviour
         if (groundpound != null && groundpound.IsFrozen)
             return;
 
-        // Get movement input
         float h = Input.GetAxisRaw("Horizontal");
         float v = Input.GetAxisRaw("Vertical");
 
         inputDirection = new Vector3(h, 0, v).normalized;
 
-        // Speed boost logic
         if (inputDirection.sqrMagnitude > 0.01f)
         {
             runTimer += Time.deltaTime;
@@ -60,7 +57,6 @@ public class Movement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        // Apply horizontal movement using velocity (no clipping)
         Vector3 horizontalVelocity = inputDirection * movementSpeed * speedMultiplier;
         Vector3 verticalVelocity = new Vector3(0, rb.linearVelocity.y, 0);
 
