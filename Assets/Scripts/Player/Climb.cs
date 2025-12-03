@@ -26,20 +26,17 @@ public class Climb : MonoBehaviour
         DetectWall();
 
         if (wallDetected && Input.GetKey(climbKey))
-        {
             StartClimbing();
-        }
-        else
-        {
+        else if (!Input.GetKey(climbKey))
             StopClimbing();
-        }
     }
 
     void FixedUpdate()
     {
         if (isClimbing)
         {
-            transform.position += Vector3.up * climbSpeed * Time.fixedDeltaTime;
+            Vector3 next = rb.position + Vector3.up * climbSpeed * Time.fixedDeltaTime;
+            rb.MovePosition(next);
         }
     }
 
@@ -49,30 +46,29 @@ public class Climb : MonoBehaviour
                          Vector3.up * rayHeight +
                          transform.forward * rayForwardOffset;
 
-        RaycastHit hit;
-        wallDetected = Physics.Raycast(origin, transform.forward, out hit, checkDistance, climbLayer);
+        wallDetected = Physics.Raycast(origin, transform.forward, out RaycastHit hit, checkDistance, climbLayer);
 
         Debug.DrawRay(origin, transform.forward * checkDistance, wallDetected ? Color.green : Color.red);
     }
 
     void StartClimbing()
     {
-        if (!isClimbing)
-        {
-            isClimbing = true;
-            rb.linearVelocity = Vector3.zero;
-            rb.useGravity = false;
-            rb.isKinematic = true;
-        }
+        if (isClimbing) return;
+
+        isClimbing = true;
+
+        rb.linearVelocity = Vector3.zero;
+
+        rb.useGravity = false;
+        rb.isKinematic = false; 
     }
 
     void StopClimbing()
     {
-        if (isClimbing)
-        {
-            isClimbing = false;
-            rb.useGravity = true;
-            rb.isKinematic = false;
-        }
+        if (!isClimbing) return;
+
+        isClimbing = false;
+
+        rb.useGravity = true;
     }
 }

@@ -6449,17 +6449,17 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2090771633}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e5a6fa7203eceed4c8498080d3d76fcf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Climb
-  climbSpeed: 3
+  climbSpeed: 4
   checkDistance: 1
   climbLayer:
     serializedVersion: 2
     m_Bits: 8
-  climbKey: 32
+  climbKey: 119
   rayHeight: 1.2
   rayForwardOffset: 0.3
 --- !u!1 &2099130732 stripped
