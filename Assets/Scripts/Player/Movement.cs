@@ -38,7 +38,7 @@ public class Movement : MonoBehaviour
         float h = Input.GetAxisRaw("Horizontal");
         float v = Input.GetAxisRaw("Vertical");
 
-        inputDirection = new Vector3(h, 0, v).normalized;
+        inputDirection = new Vector3(-h, 0, -v).normalized;
 
         if (inputDirection.sqrMagnitude > 0.01f)
         {

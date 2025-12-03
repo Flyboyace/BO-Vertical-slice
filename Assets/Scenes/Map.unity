@@ -211,13 +211,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1043706852}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
+  m_LocalRotation: {x: 0.4180755, y: -0.63537526, z: -0.068022996, w: 0.64566565}
   m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+  m_LocalEulerAnglesHint: {x: 26.964, y: -100.144, z: -43.997}
 --- !u!114 &1043706855
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -356,13 +356,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1899272280}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalRotation: {x: 0.0070910356, y: 0.9830173, z: -0.17920284, w: 0.03889788}
+  m_LocalPosition: {x: 456.6, y: 165.8, z: 103.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 20.663, y: 175.468, z: 0}
 --- !u!64 &1899272284
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -449,7 +449,7 @@ GameObject:
   - component: {fileID: 4032104679544444521}
   - component: {fileID: 140517053734803269}
   - component: {fileID: 4032104679544444522}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: fence.013
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -468,7 +468,7 @@ GameObject:
   - component: {fileID: 7184499552968420758}
   - component: {fileID: 8839853225783196886}
   - component: {fileID: 8839853225783196887}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube.045
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -525,7 +525,7 @@ GameObject:
   - component: {fileID: 3747009936509529324}
   - component: {fileID: 3533968781452711297}
   - component: {fileID: 5719741871654733589}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: fence.009
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -607,7 +607,7 @@ GameObject:
   - component: {fileID: 3297931165409188693}
   - component: {fileID: 1247976670790739346}
   - component: {fileID: 3297931165409188694}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Bell.003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -674,7 +674,7 @@ GameObject:
   - component: {fileID: 518374435954924661}
   - component: {fileID: 5582961899603110933}
   - component: {fileID: 7694285466563355522}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Plank fence.065
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -716,7 +716,7 @@ GameObject:
   - component: {fileID: 9041998299191023780}
   - component: {fileID: 5962463302571562565}
   - component: {fileID: 9041998299191023781}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Plank fence.047
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -743,7 +743,7 @@ GameObject:
   - component: {fileID: 4975449651623250933}
   - component: {fileID: 6642631155328103421}
   - component: {fileID: 6642631155328103422}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Plank fence.025
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -825,7 +825,7 @@ GameObject:
   - component: {fileID: 2050809773971136551}
   - component: {fileID: 1079662024260279226}
   - component: {fileID: 2050809773971136552}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube.008
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1737,7 +1737,7 @@ GameObject:
   - component: {fileID: 1699370302924498685}
   - component: {fileID: 992463430023410510}
   - component: {fileID: 4976311674188208227}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Plank plateau.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1771,7 +1771,7 @@ GameObject:
   - component: {fileID: 4327454311318699563}
   - component: {fileID: 3468639199452564282}
   - component: {fileID: 5071954540581882752}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube.034
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1957,7 +1957,7 @@ GameObject:
   - component: {fileID: 9017783146752724602}
   - component: {fileID: 497116252937916598}
   - component: {fileID: 9017783146752724603}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube.048
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2032,7 +2032,7 @@ GameObject:
   - component: {fileID: 2782821939318242820}
   - component: {fileID: 699615462869439356}
   - component: {fileID: 2782821939318242821}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Plank fence.041
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2051,7 +2051,7 @@ GameObject:
   - component: {fileID: 589707330947266622}
   - component: {fileID: 1003105592816784645}
   - component: {fileID: 1003105592816784646}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Plank fence.057
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2133,7 +2133,7 @@ GameObject:
   - component: {fileID: 7976023213514392120}
   - component: {fileID: 2086466144936606196}
   - component: {fileID: 7976023213514392121}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Plank fence.053
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2152,7 +2152,7 @@ GameObject:
   - component: {fileID: 6483994216059054583}
   - component: {fileID: 8010343314609525426}
   - component: {fileID: 8010343314609525427}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Plank fence.059
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2217,7 +2217,7 @@ GameObject:
   m_Component:
   - component: {fileID: 543450652801163379}
   - component: {fileID: 919132148879506122}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Hele map 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2645,7 +2645,7 @@ GameObject:
   - component: {fileID: 4587458883152121480}
   - component: {fileID: 7003389801173388648}
   - component: {fileID: 7003389801173388649}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Plank fence.004
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2664,7 +2664,7 @@ GameObject:
   - component: {fileID: 1881317787303528461}
   - component: {fileID: 383634486984069071}
   - component: {fileID: 7842007938540240629}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Plank fence
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2698,7 +2698,7 @@ GameObject:
   - component: {fileID: 8532211788474281336}
   - component: {fileID: 4503493099651846786}
   - component: {fileID: 8532211788474281337}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Plank fence.034
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2977,7 +2977,7 @@ GameObject:
   - component: {fileID: 345546471015689131}
   - component: {fileID: 8672473135087607427}
   - component: {fileID: 8672473135087607428}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Plank fence.033
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3067,7 +3067,7 @@ GameObject:
   - component: {fileID: 5378165458694809294}
   - component: {fileID: 6249841199772195885}
   - component: {fileID: 6249841199772195886}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Plank fence.008
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3149,7 +3149,7 @@ GameObject:
   - component: {fileID: 171060067345695806}
   - component: {fileID: 1950661842541363954}
   - component: {fileID: 1950661842541363955}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Plank fence.055
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3168,7 +3168,7 @@ GameObject:
   - component: {fileID: 5386575051547434734}
   - component: {fileID: 327064008137237546}
   - component: {fileID: 5386575051547434735}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube.014
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3346,7 +3346,7 @@ GameObject:
   - component: {fileID: 4052235598654180142}
   - component: {fileID: 8792484446585800280}
   - component: {fileID: 8792484446585800281}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: fence.018
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3413,7 +3413,7 @@ GameObject:
   - component: {fileID: 3418485910107171925}
   - component: {fileID: 976723960773588990}
   - component: {fileID: 3418485910107171926}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube.044
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3432,7 +3432,7 @@ GameObject:
   - component: {fileID: 8897240366634360610}
   - component: {fileID: 3129779573642487774}
   - component: {fileID: 8897240366634360611}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube.004
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3633,7 +3633,7 @@ GameObject:
   - component: {fileID: 1748618336993081249}
   - component: {fileID: 4390421822494811619}
   - component: {fileID: 6781943139740271807}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Plank fence.015
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3668,7 +3668,7 @@ GameObject:
   - component: {fileID: 3441275452159129542}
   - component: {fileID: 953134146317694685}
   - component: {fileID: 4524298505278508029}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube.024
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3703,7 +3703,7 @@ GameObject:
   - component: {fileID: 609171108744618731}
   - component: {fileID: 5539484548572093065}
   - component: {fileID: 5539484548572093066}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Fence Lower.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3871,7 +3871,7 @@ GameObject:
   - component: {fileID: 648450048836752533}
   - component: {fileID: 3824319189799201148}
   - component: {fileID: 7716927290070942282}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: dat stepje omhoog
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3953,7 +3953,7 @@ GameObject:
   - component: {fileID: 5039914342965600378}
   - component: {fileID: 2165774157704817610}
   - component: {fileID: 5502069465168597237}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Fence Lower.006
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3987,7 +3987,7 @@ GameObject:
   - component: {fileID: 1195439189214385194}
   - component: {fileID: 1838182525057431226}
   - component: {fileID: 1838182525057431227}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube.051
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4021,7 +4021,7 @@ GameObject:
   - component: {fileID: 5109987459706176247}
   - component: {fileID: 895425839050656619}
   - component: {fileID: 5586477881913118341}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube.033
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4219,7 +4219,7 @@ GameObject:
   - component: {fileID: 3593058243268617580}
   - component: {fileID: 1760409831892471893}
   - component: {fileID: 5286723674104781060}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: fence.010
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4412,7 +4412,7 @@ GameObject:
   - component: {fileID: 1295866398836661993}
   - component: {fileID: 2355982398557655744}
   - component: {fileID: 2898394800845105242}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube.013
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4431,7 +4431,7 @@ GameObject:
   - component: {fileID: 8943570157484123937}
   - component: {fileID: 8433208272764724641}
   - component: {fileID: 8943570157484123938}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Plank fence.052
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4567,7 +4567,7 @@ GameObject:
   - component: {fileID: 8482381505544577203}
   - component: {fileID: 8418640414364872422}
   - component: {fileID: 8482381505544577204}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube.003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4665,7 +4665,7 @@ GameObject:
   - component: {fileID: 4840183190165415121}
   - component: {fileID: 4210915183755736251}
   - component: {fileID: 7317790845492767634}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Plank fence.051
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4803,7 +4803,7 @@ GameObject:
   - component: {fileID: 3829625946852240142}
   - component: {fileID: 6296022604106945926}
   - component: {fileID: 6296022604106945927}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Fence Lower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5002,7 +5002,7 @@ GameObject:
   - component: {fileID: 5622638722988780188}
   - component: {fileID: 9030554368677693326}
   - component: {fileID: 9030554368677693327}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Fence Lower.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5021,7 +5021,7 @@ GameObject:
   - component: {fileID: 5911599191731421526}
   - component: {fileID: 5490975927082785550}
   - component: {fileID: 5911599191731421527}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: fence_join
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5285,7 +5285,7 @@ GameObject:
   - component: {fileID: 8792733919951617401}
   - component: {fileID: 3154388368240783955}
   - component: {fileID: 8792733919951617402}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Plank fence.020
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5598,7 +5598,7 @@ GameObject:
   - component: {fileID: 6876059422634345097}
   - component: {fileID: 5384421884785470786}
   - component: {fileID: 8589026183032465564}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube.047
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5733,7 +5733,7 @@ GameObject:
   - component: {fileID: 3420368097054515647}
   - component: {fileID: 8090216034695280850}
   - component: {fileID: 8090216034695280851}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: fence.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6010,7 +6010,7 @@ GameObject:
   - component: {fileID: 2641921951703745763}
   - component: {fileID: 6654935620438742179}
   - component: {fileID: 7963587753231497896}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: lVL3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6114,7 +6114,7 @@ GameObject:
   - component: {fileID: 3798220189145408959}
   - component: {fileID: 6308290171510941059}
   - component: {fileID: 7941974383136881199}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Plank fence.066
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6253,7 +6253,7 @@ GameObject:
   - component: {fileID: 754110981391266039}
   - component: {fileID: 7242670297823983677}
   - component: {fileID: 7626068060134366324}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Plank fence.026
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6494,7 +6494,7 @@ GameObject:
   - component: {fileID: 473596975501311491}
   - component: {fileID: 6672696517219676580}
   - component: {fileID: 7236561096322237065}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Plank fence.027
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6624,7 +6624,7 @@ GameObject:
   - component: {fileID: 1728479364822462309}
   - component: {fileID: 8391255557370959779}
   - component: {fileID: 8391255557370959780}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube.066
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7020,7 +7020,7 @@ GameObject:
   - component: {fileID: 2928514860372289617}
   - component: {fileID: 6947464324914256326}
   - component: {fileID: 6947464324914256327}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube.029
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7179,7 +7179,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3205248417040949602, guid: 58136c89ae891a246ab21ddaeec4a33b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 135.63116
+      value: 136.33
       objectReference: {fileID: 0}
     - target: {fileID: 3205248417040949602, guid: 58136c89ae891a246ab21ddaeec4a33b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -7216,8 +7216,162 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2823903032162106328, guid: 58136c89ae891a246ab21ddaeec4a33b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3526611517732137576}
+    - targetCorrespondingSourceObject: {fileID: 2823903032162106328, guid: 58136c89ae891a246ab21ddaeec4a33b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3526611517732137575}
+    - targetCorrespondingSourceObject: {fileID: 2823903032162106328, guid: 58136c89ae891a246ab21ddaeec4a33b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3526611517732137574}
+    - targetCorrespondingSourceObject: {fileID: 2823903032162106328, guid: 58136c89ae891a246ab21ddaeec4a33b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3526611517732137573}
+    - targetCorrespondingSourceObject: {fileID: 2823903032162106328, guid: 58136c89ae891a246ab21ddaeec4a33b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3526611517732137572}
+    - targetCorrespondingSourceObject: {fileID: 2823903032162106328, guid: 58136c89ae891a246ab21ddaeec4a33b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3526611517732137579}
+    - targetCorrespondingSourceObject: {fileID: 2823903032162106328, guid: 58136c89ae891a246ab21ddaeec4a33b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3526611517732137578}
   m_SourcePrefab: {fileID: 100100000, guid: 58136c89ae891a246ab21ddaeec4a33b, type: 3}
+--- !u!1 &3526611517732137571 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2823903032162106328, guid: 58136c89ae891a246ab21ddaeec4a33b, type: 3}
+  m_PrefabInstance: {fileID: 3526611517732137570}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3526611517732137572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3526611517732137571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57b9d78a48abe6e44bdd3db033ae7164, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Movement
+  movementSpeed: 25
+  jumpForce: 6
+  holdJumpForce: 3
+  maxHoldTime: 0.2
+--- !u!114 &3526611517732137573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3526611517732137571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d635e3952faacdf4e92aac61ee1a5d8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Groundpound
+  groundPoundForce: 110
+  landingFreezeTime: 0.4
+--- !u!114 &3526611517732137574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3526611517732137571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 772950b27d5d20047a419318be67ea75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CoinPickup
+  coins: 0
+  greenStar: 0
+--- !u!114 &3526611517732137575
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3526611517732137571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5a6fa7203eceed4c8498080d3d76fcf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Climb
+  climbSpeed: 4
+  checkDistance: 1
+  climbLayer:
+    serializedVersion: 2
+    m_Bits: 8
+  climbKey: 119
+  rayHeight: 1.2
+  rayForwardOffset: 0.3
+--- !u!114 &3526611517732137576
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3526611517732137571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2998b9349a76b2a4a8f3a58f5a50eaa5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CameraMovement
+  playerPos: {fileID: 0}
+  isOnCamEdge: 0
+--- !u!136 &3526611517732137578
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3526611517732137571}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &3526611517732137579
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3526611517732137571}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 2
 --- !u!23 &3533290052574375436
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7334,7 +7488,7 @@ GameObject:
   - component: {fileID: 2718089412023937336}
   - component: {fileID: 3081318253178742900}
   - component: {fileID: 3548834799963279365}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: lvl1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7383,7 +7537,7 @@ GameObject:
   - component: {fileID: 7323766367304358035}
   - component: {fileID: 5659310918494006386}
   - component: {fileID: 7323766367304358036}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Plank fence.064
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7450,7 +7604,7 @@ GameObject:
   - component: {fileID: 7088021503984025155}
   - component: {fileID: 685854497500652049}
   - component: {fileID: 7088021503984025156}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Stump.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7517,7 +7671,7 @@ GameObject:
   - component: {fileID: 1019234668680916814}
   - component: {fileID: 2533361052439918604}
   - component: {fileID: 4841980464712700050}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Plank fence.014
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7624,7 +7778,7 @@ GameObject:
   - component: {fileID: 3792546769521347936}
   - component: {fileID: 1533011820013146556}
   - component: {fileID: 8507335530913334595}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Plank fence.035
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7818,7 +7972,7 @@ GameObject:
   - component: {fileID: 5317563540555020514}
   - component: {fileID: 5957226316250451557}
   - component: {fileID: 7161549287652932623}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: fence.012
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7837,7 +7991,7 @@ GameObject:
   - component: {fileID: 8278747191406699620}
   - component: {fileID: 1228789714446460568}
   - component: {fileID: 8278747191406699621}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: fence.005
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7916,7 +8070,7 @@ GameObject:
   - component: {fileID: 5566860162783299689}
   - component: {fileID: 2387270152100019636}
   - component: {fileID: 6661981071470830147}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Plank fence.018
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7958,7 +8112,7 @@ GameObject:
   - component: {fileID: 5694284881626741193}
   - component: {fileID: 2711812061091447618}
   - component: {fileID: 6772461818300687223}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: fence.014
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8070,7 +8224,7 @@ GameObject:
   - component: {fileID: 4938768175669699934}
   - component: {fileID: 4876285997433389975}
   - component: {fileID: 4938768175669699935}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube.052
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8175,7 +8329,7 @@ GameObject:
   - component: {fileID: 7337017061555009615}
   - component: {fileID: 7732224500828064588}
   - component: {fileID: 7732224500828064589}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: fence.011
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8414,7 +8568,7 @@ GameObject:
   - component: {fileID: 6772912780513041984}
   - component: {fileID: 1914653231933156501}
   - component: {fileID: 6772912780513041985}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube.019
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8497,7 +8651,7 @@ GameObject:
   - component: {fileID: 9061284114978189255}
   - component: {fileID: 353104996128775235}
   - component: {fileID: 9061284114978189256}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Plank fence.024
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8524,7 +8678,7 @@ GameObject:
   - component: {fileID: 2210192938200632785}
   - component: {fileID: 1738776581118172828}
   - component: {fileID: 4356877828183625161}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube.018
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8658,7 +8812,7 @@ GameObject:
   - component: {fileID: 4331255247622351424}
   - component: {fileID: 2380895030570707729}
   - component: {fileID: 5875743987061301496}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Plank fence.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8852,7 +9006,7 @@ GameObject:
   - component: {fileID: 8678946765930022159}
   - component: {fileID: 6275833176459821167}
   - component: {fileID: 8906773799808501584}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube.020
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8923,7 +9077,7 @@ GameObject:
   - component: {fileID: 9046846665976076426}
   - component: {fileID: 2544287535398483645}
   - component: {fileID: 9046846665976076427}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Plank fence.019
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8950,7 +9104,7 @@ GameObject:
   - component: {fileID: 2372685980950150712}
   - component: {fileID: 3522302187936536821}
   - component: {fileID: 4587152785235841249}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Plank fence.050
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9047,7 +9201,7 @@ GameObject:
   - component: {fileID: 8442506659187897957}
   - component: {fileID: 757579346562312345}
   - component: {fileID: 8442506659187897958}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Plank fence.061
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9129,7 +9283,7 @@ GameObject:
   - component: {fileID: 8332919927986039979}
   - component: {fileID: 6305048431036051178}
   - component: {fileID: 8332919927986039980}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Plank fence.039
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9148,7 +9302,7 @@ GameObject:
   - component: {fileID: 6177406248324591255}
   - component: {fileID: 3257111837319920914}
   - component: {fileID: 6377504251157331233}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Plank fence.060
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9167,7 +9321,7 @@ GameObject:
   - component: {fileID: 8692010715341533416}
   - component: {fileID: 2567218093535165525}
   - component: {fileID: 8692010715341533417}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Plank fence.009
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9186,7 +9340,7 @@ GameObject:
   - component: {fileID: 551354022570856533}
   - component: {fileID: 1688462441183655459}
   - component: {fileID: 4707904721051149731}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Plank fence.032
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9305,7 +9459,7 @@ GameObject:
   - component: {fileID: 436262800753706747}
   - component: {fileID: 9001459231228459089}
   - component: {fileID: 9001459231228459090}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Plank fence.043
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9347,7 +9501,7 @@ GameObject:
   - component: {fileID: 2138080898827098742}
   - component: {fileID: 3842113139166417595}
   - component: {fileID: 4809637998159300058}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: fence.003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9560,7 +9714,7 @@ GameObject:
   - component: {fileID: 7531535135989383749}
   - component: {fileID: 3508214549564805004}
   - component: {fileID: 7531535135989383750}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: lVL2.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9758,7 +9912,7 @@ GameObject:
   - component: {fileID: 2771256134974141127}
   - component: {fileID: 7061659823713087623}
   - component: {fileID: 8359658419052399339}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Plank fence.049
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9833,7 +9987,7 @@ GameObject:
   - component: {fileID: 8579955335865126084}
   - component: {fileID: 1691823380456814064}
   - component: {fileID: 8579955335865126085}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: fence.007
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9937,7 +10091,7 @@ GameObject:
   - component: {fileID: 5340485147133401919}
   - component: {fileID: 354138260155654095}
   - component: {fileID: 7235026057200808498}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Plank plateau.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9956,7 +10110,7 @@ GameObject:
   - component: {fileID: 2967460243214070143}
   - component: {fileID: 2870034068831092884}
   - component: {fileID: 6373117775628620537}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: fence.016
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9975,7 +10129,7 @@ GameObject:
   - component: {fileID: 5640423264533461728}
   - component: {fileID: 5425505347233329489}
   - component: {fileID: 5640423264533461729}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube.041
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10144,7 +10298,7 @@ GameObject:
   - component: {fileID: 1084775552386915478}
   - component: {fileID: 1531172179056379522}
   - component: {fileID: 5234912009547510107}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Plank fence.042
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10200,7 +10354,7 @@ GameObject:
   - component: {fileID: 5109465924874000789}
   - component: {fileID: 1862668053185216395}
   - component: {fileID: 5242305873453604508}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Stump.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10241,7 +10395,7 @@ GameObject:
   - component: {fileID: 2001263133876661364}
   - component: {fileID: 3859947755746405604}
   - component: {fileID: 5252682845689791361}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube.016
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10380,7 +10534,7 @@ GameObject:
   - component: {fileID: 2502915276922936669}
   - component: {fileID: 3451175228185658711}
   - component: {fileID: 5332470020089118009}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: fence.004
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10649,7 +10803,7 @@ GameObject:
   - component: {fileID: 2040280107188735059}
   - component: {fileID: 5008022235827100993}
   - component: {fileID: 6490625522338540983}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube.021
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10753,7 +10907,7 @@ GameObject:
   - component: {fileID: 6119245439337553978}
   - component: {fileID: 4227002291685507238}
   - component: {fileID: 6119245439337553979}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: fence.020
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10842,7 +10996,7 @@ GameObject:
   - component: {fileID: 3533862751948727722}
   - component: {fileID: 242816374910333225}
   - component: {fileID: 5555481774598223381}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Plank fence.021
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11085,7 +11239,7 @@ GameObject:
   - component: {fileID: 3349020075665345302}
   - component: {fileID: 2141352372172503973}
   - component: {fileID: 5670555067645964728}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Plank plateau.004
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11126,7 +11280,7 @@ GameObject:
   - component: {fileID: 9170846853058871174}
   - component: {fileID: 355894166454639046}
   - component: {fileID: 9170846853058871175}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube.030
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11190,7 +11344,7 @@ GameObject:
   - component: {fileID: 2092188608328918410}
   - component: {fileID: 2427969067581063529}
   - component: {fileID: 5736819418805693615}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: fence.008
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11401,7 +11555,7 @@ GameObject:
   - component: {fileID: 5383179511817083723}
   - component: {fileID: 8616184511861694994}
   - component: {fileID: 8616184511861694995}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube.028
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11435,7 +11589,7 @@ GameObject:
   - component: {fileID: 8674563620039734745}
   - component: {fileID: 61665134512290825}
   - component: {fileID: 8674563620039734746}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: fence_join.003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11454,7 +11608,7 @@ GameObject:
   - component: {fileID: 8301602681805981354}
   - component: {fileID: 3236342450082419974}
   - component: {fileID: 8301602681805981355}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: fence.019
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11473,7 +11627,7 @@ GameObject:
   - component: {fileID: 8529842420428063380}
   - component: {fileID: 805881453803419487}
   - component: {fileID: 8529842420428063381}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Plank fence.028
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11529,7 +11683,7 @@ GameObject:
   - component: {fileID: 2273284602642487277}
   - component: {fileID: 494742290120561555}
   - component: {fileID: 5895395430915119680}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Plank fence.012
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11789,7 +11943,7 @@ GameObject:
   - component: {fileID: 7795007036212813166}
   - component: {fileID: 4078581506810742957}
   - component: {fileID: 7795007036212813167}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Plank fence.038
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11853,7 +12007,7 @@ GameObject:
   - component: {fileID: 1048724834876593812}
   - component: {fileID: 4432071487549435714}
   - component: {fileID: 6014503084283484122}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube.015
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11957,7 +12111,7 @@ GameObject:
   - component: {fileID: 6163204875055725699}
   - component: {fileID: 3071901216935091049}
   - component: {fileID: 6163204875055725700}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Bell.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12007,7 +12161,7 @@ GameObject:
   - component: {fileID: 2093738376828512998}
   - component: {fileID: 6463417113887027821}
   - component: {fileID: 9118323515684418522}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Plint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12074,7 +12228,7 @@ GameObject:
   - component: {fileID: 789173349852277430}
   - component: {fileID: 2549569355381429553}
   - component: {fileID: 6085649863541724059}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube.037
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12153,7 +12307,7 @@ GameObject:
   - component: {fileID: 41181663701029641}
   - component: {fileID: 6181388213900228015}
   - component: {fileID: 6181388213900228016}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Plank fence.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12296,7 +12450,7 @@ GameObject:
   - component: {fileID: 7998331275294771175}
   - component: {fileID: 5109679258397946326}
   - component: {fileID: 7998331275294771176}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: fence.022
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12315,7 +12469,7 @@ GameObject:
   - component: {fileID: 3517951208535082049}
   - component: {fileID: 1512191506992181140}
   - component: {fileID: 6248574975769662045}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube.039
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12570,7 +12724,7 @@ GameObject:
   - component: {fileID: 6825081698050601631}
   - component: {fileID: 1810946592938748850}
   - component: {fileID: 6825081698050601632}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Plank fence.029
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12929,7 +13083,7 @@ GameObject:
   - component: {fileID: 1723629721595271744}
   - component: {fileID: 5366800995468780980}
   - component: {fileID: 6348606209535791843}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube.031
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13048,7 +13202,7 @@ GameObject:
   - component: {fileID: 8292017049873531945}
   - component: {fileID: 4912731163903035451}
   - component: {fileID: 8292017049873531946}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Plateau
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13156,7 +13310,7 @@ GameObject:
   - component: {fileID: 475926140954520898}
   - component: {fileID: 466608246512497999}
   - component: {fileID: 6461109676949677364}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube.022
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13313,7 +13467,7 @@ GameObject:
   - component: {fileID: 8519478568269456313}
   - component: {fileID: 1346966364118914736}
   - component: {fileID: 8519478568269456314}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: fence_join.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13332,7 +13486,7 @@ GameObject:
   - component: {fileID: 4909851564017256785}
   - component: {fileID: 4153637011362227861}
   - component: {fileID: 6560509774299950333}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: fence_join.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13443,7 +13597,7 @@ GameObject:
   - component: {fileID: 6066007876746495080}
   - component: {fileID: 3660365466460152118}
   - component: {fileID: 6652771003404880353}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Strapje
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13617,7 +13771,7 @@ GameObject:
   - component: {fileID: 9155275841003503794}
   - component: {fileID: 6749947461482930602}
   - component: {fileID: 9155275841003503795}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube.036
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13884,7 +14038,7 @@ GameObject:
   - component: {fileID: 5330946205870938474}
   - component: {fileID: 4634800511370078656}
   - component: {fileID: 6788000572820723067}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Plank fence.040
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14050,7 +14204,7 @@ GameObject:
   - component: {fileID: 5025360863334136063}
   - component: {fileID: 6083805015626006109}
   - component: {fileID: 6891385316353131303}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: fence
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14091,7 +14245,7 @@ GameObject:
   - component: {fileID: 1682509470370254454}
   - component: {fileID: 3180476321662052486}
   - component: {fileID: 7789856629060321286}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Plank fence.048
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14243,7 +14397,7 @@ GameObject:
   - component: {fileID: 4240055837809044815}
   - component: {fileID: 6298939227049384413}
   - component: {fileID: 6947470290367131886}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Stump.003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14432,7 +14586,7 @@ GameObject:
   - component: {fileID: 4870004670452401996}
   - component: {fileID: 1442450554212833013}
   - component: {fileID: 7041628270922998598}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube.017
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14473,7 +14627,7 @@ GameObject:
   - component: {fileID: 6464393433525927911}
   - component: {fileID: 7841272780522748039}
   - component: {fileID: 7841272780522748040}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube.049
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14492,7 +14646,7 @@ GameObject:
   - component: {fileID: 8096774476271673521}
   - component: {fileID: 4968319875047749476}
   - component: {fileID: 8096774476271673522}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Plank fence.013
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14589,7 +14743,7 @@ GameObject:
   - component: {fileID: 370415572537841999}
   - component: {fileID: 2927593091220793262}
   - component: {fileID: 7103153012104710899}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube.038
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14630,7 +14784,7 @@ GameObject:
   - component: {fileID: 4266091029218578985}
   - component: {fileID: 3533290052574375436}
   - component: {fileID: 7117641063354938009}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Plank fence.016
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14686,7 +14840,7 @@ GameObject:
   - component: {fileID: 8827015191092060929}
   - component: {fileID: 6256850651508139262}
   - component: {fileID: 8827015191092060930}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: fence.015
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14705,7 +14859,7 @@ GameObject:
   - component: {fileID: 1875574318511159305}
   - component: {fileID: 2703605235737176325}
   - component: {fileID: 7160973715415185591}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: fence.006
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14783,7 +14937,7 @@ GameObject:
   - component: {fileID: 8973384311228154228}
   - component: {fileID: 4679638146748552946}
   - component: {fileID: 8973384311228154229}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Plank fence.056
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14802,7 +14956,7 @@ GameObject:
   - component: {fileID: 215592838285558631}
   - component: {fileID: 1558643249271033013}
   - component: {fileID: 7178114112609438385}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube.009
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14843,7 +14997,7 @@ GameObject:
   - component: {fileID: 4348440454553830823}
   - component: {fileID: 8628502785913970947}
   - component: {fileID: 8628502785913970948}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube.023
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14870,7 +15024,7 @@ GameObject:
   - component: {fileID: 5580648596068567172}
   - component: {fileID: 6724358319222785812}
   - component: {fileID: 7185640256859009144}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Plank fence.058
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14911,7 +15065,7 @@ GameObject:
   - component: {fileID: 4563697684140681688}
   - component: {fileID: 2132897989884129581}
   - component: {fileID: 7192073283298436655}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Plank fence.045
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15089,7 +15243,7 @@ GameObject:
   - component: {fileID: 6163726491210777606}
   - component: {fileID: 1205421288775084945}
   - component: {fileID: 8632250626256455432}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Fence Lower.003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15123,7 +15277,7 @@ GameObject:
   - component: {fileID: 5231732076538995619}
   - component: {fileID: 4462128690350388636}
   - component: {fileID: 7286544542076408453}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Plank fence.046
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15179,7 +15333,7 @@ GameObject:
   - component: {fileID: 7811461271680344993}
   - component: {fileID: 2008768548885245849}
   - component: {fileID: 7811461271680344994}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Plank fence.011
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15198,7 +15352,7 @@ GameObject:
   - component: {fileID: 589547219904136030}
   - component: {fileID: 1937317996109478908}
   - component: {fileID: 9174459902737337237}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Plank fence.006
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15217,7 +15371,7 @@ GameObject:
   - component: {fileID: 2746911314232653259}
   - component: {fileID: 6359670707292825878}
   - component: {fileID: 8391800353710799579}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Plank fence.010
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15311,7 +15465,7 @@ GameObject:
   - component: {fileID: 7536177113309090376}
   - component: {fileID: 945454401006490864}
   - component: {fileID: 7536177113309090377}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube.040
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15330,7 +15484,7 @@ GameObject:
   - component: {fileID: 3901834441271195934}
   - component: {fileID: 6272350532395683893}
   - component: {fileID: 7333631254548257483}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube.042
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15379,7 +15533,7 @@ GameObject:
   - component: {fileID: 431688533325667112}
   - component: {fileID: 5781702823098858401}
   - component: {fileID: 7351447486666381772}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Plank fence.037
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15420,7 +15574,7 @@ GameObject:
   - component: {fileID: 8436024266469659347}
   - component: {fileID: 6955233920109166293}
   - component: {fileID: 8436024266469659348}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Plane.007
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15487,7 +15641,7 @@ GameObject:
   - component: {fileID: 8454744395253214332}
   - component: {fileID: 5073603068328505676}
   - component: {fileID: 8454744395253214333}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: fence.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15637,7 +15791,7 @@ GameObject:
   - component: {fileID: 8401952775588599514}
   - component: {fileID: 7416691524634742315}
   - component: {fileID: 8401952775588599515}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube.005
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15762,7 +15916,7 @@ GameObject:
   - component: {fileID: 8542036705986050140}
   - component: {fileID: 3251961985083678812}
   - component: {fileID: 8542036705986050141}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube.035
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16152,7 +16306,7 @@ GameObject:
   - component: {fileID: 1075669131754773315}
   - component: {fileID: 6294062970961117845}
   - component: {fileID: 7917349904845527213}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube.046
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16297,7 +16451,7 @@ GameObject:
   - component: {fileID: 420694215664317055}
   - component: {fileID: 1595097082792905573}
   - component: {fileID: 8494251015421564254}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube.050
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16376,7 +16530,7 @@ GameObject:
   - component: {fileID: 4120273707966601191}
   - component: {fileID: 2268585887732508053}
   - component: {fileID: 8000498262044374385}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Plank fence.023
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16417,7 +16571,7 @@ GameObject:
   - component: {fileID: 7606442908156973938}
   - component: {fileID: 4321514656480686877}
   - component: {fileID: 8009987137068905811}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube.011
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16528,7 +16682,7 @@ GameObject:
   - component: {fileID: 7711099027016690224}
   - component: {fileID: 8954434370052041708}
   - component: {fileID: 8954434370052041709}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Plank plateau
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16733,7 +16887,7 @@ GameObject:
   - component: {fileID: 3805619206561225836}
   - component: {fileID: 6902720363943324696}
   - component: {fileID: 8161499361367767626}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Plank fence.067
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16822,7 +16976,7 @@ GameObject:
   - component: {fileID: 8959811720938941332}
   - component: {fileID: 5041109764267140043}
   - component: {fileID: 8959811720938941333}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Plank fence.022
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16841,7 +16995,7 @@ GameObject:
   - component: {fileID: 501181768038969953}
   - component: {fileID: 9166235844458575679}
   - component: {fileID: 9166235844458575680}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: fence.017
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17403,7 +17557,7 @@ GameObject:
   - component: {fileID: 2532461180823099812}
   - component: {fileID: 5964472179622226463}
   - component: {fileID: 8468504242247260216}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Plank fence.063
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17474,7 +17628,7 @@ GameObject:
   - component: {fileID: 3404236367100404930}
   - component: {fileID: 6027543246495865452}
   - component: {fileID: 8485173162223657441}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube.012
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17589,7 +17743,7 @@ GameObject:
   - component: {fileID: 4493878644583841149}
   - component: {fileID: 4218985505769095628}
   - component: {fileID: 8518740582498549032}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Plank fence.044
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17720,7 +17874,7 @@ GameObject:
   - component: {fileID: 3770250839221384816}
   - component: {fileID: 3682081015183906082}
   - component: {fileID: 8538478021565337094}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Plank plateau.003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17761,7 +17915,7 @@ GameObject:
   - component: {fileID: 8772544490899939114}
   - component: {fileID: 3812924023307173917}
   - component: {fileID: 8772544490899939115}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Plank fence.017
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17810,7 +17964,7 @@ GameObject:
   - component: {fileID: 6094484959978712940}
   - component: {fileID: 8436230607770246727}
   - component: {fileID: 8571162131645238970}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube.043
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17851,7 +18005,7 @@ GameObject:
   - component: {fileID: 4780790647930353557}
   - component: {fileID: 7621133392693346728}
   - component: {fileID: 8578709097674318176}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube.032
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17922,7 +18076,7 @@ GameObject:
   - component: {fileID: 4462793577815769406}
   - component: {fileID: 8174549625941771633}
   - component: {fileID: 8581484736704667349}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Plank fence.054
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18015,7 +18169,7 @@ GameObject:
   - component: {fileID: 7304543148588483097}
   - component: {fileID: 5125133047775896092}
   - component: {fileID: 8594199504081820711}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Plank fence.030
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18419,7 +18573,7 @@ GameObject:
   - component: {fileID: 2406906959680788468}
   - component: {fileID: 4726281013391090759}
   - component: {fileID: 8718742751748835436}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Plank fence.003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18460,7 +18614,7 @@ GameObject:
   - component: {fileID: 8894691112692103322}
   - component: {fileID: 6745302439487717463}
   - component: {fileID: 8894691112692103323}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube.006
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18609,7 +18763,7 @@ GameObject:
   - component: {fileID: 6056554819972708884}
   - component: {fileID: 8606564324433185948}
   - component: {fileID: 8796144179143312478}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: fence.021
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19085,7 +19239,7 @@ GameObject:
   - component: {fileID: 1703912658654989681}
   - component: {fileID: 8102382928979318819}
   - component: {fileID: 9014776605216089100}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube.007
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19226,7 +19380,7 @@ GameObject:
   - component: {fileID: 8021209314761365467}
   - component: {fileID: 1234306228867087281}
   - component: {fileID: 9038636563383081811}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Bell.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19357,7 +19511,7 @@ GameObject:
   - component: {fileID: 2167142280213452917}
   - component: {fileID: 2665147474145963846}
   - component: {fileID: 9096405183126771215}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Plank fence.031
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19398,7 +19552,7 @@ GameObject:
   - component: {fileID: 1964808116385230122}
   - component: {fileID: 848195154657052817}
   - component: {fileID: 9107978083146335503}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Plank fence.007
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19476,7 +19630,7 @@ GameObject:
   - component: {fileID: 19156296130505642}
   - component: {fileID: 649251791557993267}
   - component: {fileID: 9141816029533104271}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube.026
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19547,7 +19701,7 @@ GameObject:
   - component: {fileID: 1922597697649389343}
   - component: {fileID: 2733319492526415158}
   - component: {fileID: 9158743093935872030}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube.065
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19725,7 +19879,7 @@ GameObject:
   - component: {fileID: 5783640275155003465}
   - component: {fileID: 6265023103531533537}
   - component: {fileID: 9178048502039980370}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Plank fence.036
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19766,7 +19920,7 @@ GameObject:
   - component: {fileID: 8809624449119576657}
   - component: {fileID: 3144338894823736692}
   - component: {fileID: 9192560616618901724}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Plank fence.062
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19807,7 +19961,7 @@ GameObject:
   - component: {fileID: 2989901907252868289}
   - component: {fileID: 2380718650959820104}
   - component: {fileID: 9217234437892956661}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube.027
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19848,7 +20002,7 @@ GameObject:
   - component: {fileID: 6164240253768835395}
   - component: {fileID: 2965968850209519828}
   - component: {fileID: 9217866197691183808}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Plank fence.005
   m_TagString: Untagged
   m_Icon: {fileID: 0}
