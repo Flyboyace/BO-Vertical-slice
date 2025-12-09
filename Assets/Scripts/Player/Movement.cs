@@ -2,87 +2,89 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
-    [SerializeField] private float movementSpeed = 5f;
+    [Header("Movement")]
+    public float speed = 6f;
+    public float boostedSpeed = 12f;
+    public float timeToSpeedBoost = 2.5f;
 
-    [Header("Jump Settings")]
-    [SerializeField] private float jumpForce = 8f;
-    [SerializeField] private float fallGravityMultiplier = 3f;
-    [SerializeField] private float lowJumpGravityMultiplier = 2f;
+    [Header("Jumping")]
+    public float jumpForce = 7f;
+    public float fallGravityMultiplier = 3f;
+    public float lowJumpGravityMultiplier = 2f;
 
-    [Header("Speed Boost")]
-    [SerializeField] private float timeToSpeedBoost = 2.5f;
+    private Rigidbody rb;
+    private GroundPound gp;
+    private Climb climb;
+
+    private Vector3 input;
 
     private float runTimer = 0f;
-    private float speedMultiplier = 1f;
-
-    private Vector3 inputDirection;
-    private Rigidbody rb;
-    private Groundpound groundpound;
+    private bool isBoosted = false;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
-        groundpound = GetComponent<Groundpound>();
+        gp = GetComponent<GroundPound>();
+        climb = GetComponent<Climb>();
 
         rb.freezeRotation = true;
-        rb.interpolation = RigidbodyInterpolation.Interpolate;
-        rb.collisionDetectionMode = CollisionDetectionMode.ContinuousDynamic;
     }
 
     private void Update()
     {
-        if (groundpound != null && groundpound.IsFrozen)
+        if (gp.IsGroundPounding || climb.IsClimbing)
             return;
 
         float h = Input.GetAxisRaw("Horizontal");
         float v = Input.GetAxisRaw("Vertical");
 
-        inputDirection = new Vector3(-h, 0, -v).normalized;
+        input = new Vector3(-h, 0, -v).normalized;
 
-        if (inputDirection.sqrMagnitude > 0.01f)
+        if (input.sqrMagnitude > 0.01f)
         {
             runTimer += Time.deltaTime;
+
             if (runTimer >= timeToSpeedBoost)
-                speedMultiplier = 2f;
+                isBoosted = true;
         }
         else
         {
             runTimer = 0f;
-            speedMultiplier = 1f;
+            isBoosted = false;
         }
 
-        HandleJumpInput();
+        if (Input.GetKeyDown(KeyCode.Space) && IsGrounded())
+        {
+            rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+        }
     }
 
     private void FixedUpdate()
     {
-        
-        Vector3 horizontalVel = inputDirection * movementSpeed * speedMultiplier;
+        if (gp.IsGroundPounding || climb.IsClimbing)
+            return;
+
+        float currentSpeed = isBoosted ? boostedSpeed : speed;
+
+        Vector3 moveDirection =
+            transform.right * input.x +
+            transform.forward * input.z;
 
         rb.linearVelocity = new Vector3(
-            horizontalVel.x,
+            moveDirection.x * currentSpeed,
             rb.linearVelocity.y,
-            horizontalVel.z
+            moveDirection.z * currentSpeed
         );
 
-        
-        if (rb.linearVelocity.y < 0) 
+        if (rb.linearVelocity.y < 0)
         {
             rb.AddForce(Vector3.up * Physics.gravity.y * (fallGravityMultiplier - 1f),
                 ForceMode.Acceleration);
         }
-        else if (rb.linearVelocity.y > 0 && !Input.GetKey(KeyCode.Space)) 
+        else if (rb.linearVelocity.y > 0 && !Input.GetKey(KeyCode.Space))
         {
             rb.AddForce(Vector3.up * Physics.gravity.y * (lowJumpGravityMultiplier - 1f),
                 ForceMode.Acceleration);
-        }
-    }
-
-    private void HandleJumpInput()
-    {
-        if (Input.GetKeyDown(KeyCode.Space) && IsGrounded())
-        {
-            rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
         }
     }
 

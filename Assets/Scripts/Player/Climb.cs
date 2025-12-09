@@ -2,73 +2,63 @@ using UnityEngine;
 
 public class Climb : MonoBehaviour
 {
-    [Header("Climb Settings")]
-    public float climbSpeed = 3f;
-    public float checkDistance = 1f;
-    public LayerMask climbLayer;
-    public KeyCode climbKey = KeyCode.Space;
+    public float climbSpeed = 4f;
+    public float climbCheckDistance = 0.6f;
+    public LayerMask climbableMask;
 
-    [Header("Ray Settings")]
-    public float rayHeight = 1.2f;
-    public float rayForwardOffset = 0.3f;
+    public bool IsClimbing { get; private set; }
 
-    private Rigidbody rb;
-    private bool isClimbing = false;
-    private bool wallDetected = false;
+    Rigidbody rb;
+    GroundPound gp;
 
-    void Start()
+    private void Start()
     {
         rb = GetComponent<Rigidbody>();
+        gp = GetComponent<GroundPound>();
     }
 
-    void Update()
+    private void FixedUpdate()
     {
-        DetectWall();
-
-        if (wallDetected && Input.GetKey(climbKey))
-            StartClimbing();
-        else if (!Input.GetKey(climbKey))
-            StopClimbing();
-    }
-
-    void FixedUpdate()
-    {
-        if (isClimbing)
+        if (gp.IsGroundPounding)
         {
-            Vector3 next = rb.position + Vector3.up * climbSpeed * Time.fixedDeltaTime;
-            rb.MovePosition(next);
+            StopClimbing();
+            return;
+        }
+
+        CheckClimb();
+
+        if (IsClimbing)
+        {
+            rb.useGravity = false;
+
+            float v = Input.GetAxisRaw("Vertical");
+            rb.linearVelocity = Vector3.up * v * climbSpeed;
         }
     }
 
-    void DetectWall()
+    void CheckClimb()
     {
-        Vector3 origin = transform.position +
-                         Vector3.up * rayHeight +
-                         transform.forward * rayForwardOffset;
+        Vector3 origin = transform.position + Vector3.up * 1f;
 
-        wallDetected = Physics.Raycast(origin, transform.forward, out RaycastHit hit, checkDistance, climbLayer);
-
-        Debug.DrawRay(origin, transform.forward * checkDistance, wallDetected ? Color.green : Color.red);
-    }
-
-    void StartClimbing()
-    {
-        if (isClimbing) return;
-
-        isClimbing = true;
-
-        rb.linearVelocity = Vector3.zero;
-
-        rb.useGravity = false;
-        rb.isKinematic = false; 
+        if (Physics.Raycast(origin, transform.forward, climbCheckDistance, climbableMask))
+        {
+            if (!IsClimbing)
+            {
+                IsClimbing = true;
+                rb.linearVelocity = Vector3.zero;
+            }
+        }
+        else
+        {
+            StopClimbing();
+        }
     }
 
     void StopClimbing()
     {
-        if (!isClimbing) return;
+        if (!IsClimbing) return;
 
-        isClimbing = false;
-
+        IsClimbing = false;
         rb.useGravity = true;
     }
 }

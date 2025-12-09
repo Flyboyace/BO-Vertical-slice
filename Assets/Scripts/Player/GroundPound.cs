@@ -1,74 +1,48 @@
 using UnityEngine;
 
-public class Groundpound : MonoBehaviour
+public class GroundPound : MonoBehaviour
 {
-    [SerializeField] private float groundPoundForce = 20f;
-    [SerializeField] private float landingFreezeTime = 0.25f;
+    public float slamSpeed = -20f;
+    public KeyCode groundPoundKey = KeyCode.LeftShift;
 
-    private bool isGroundPounding = false;
-    private bool isFreezing = false;
-    private float freezeTimer = 0f;
+    public bool IsGroundPounding { get; private set; }
 
-    private Rigidbody rb;
-    private Movement movement;
+    Rigidbody rb;
+    Movement move;
+    Climb climb;
 
-    public bool IsGroundPounding => isGroundPounding;
-    public bool IsFrozen => isFreezing;
-
-    void Start()
+    private void Start()
     {
         rb = GetComponent<Rigidbody>();
-        movement = GetComponent<Movement>();
+        move = GetComponent<Movement>();
+        climb = GetComponent<Climb>();
     }
 
-    void Update()
+    private void Update()
     {
-        if (!movement.IsGrounded() && !isGroundPounding && Input.GetKeyDown(KeyCode.LeftControl))
+        if (IsGroundPounding)
+            return;
+
+        if (Input.GetKeyDown(groundPoundKey) && !move.IsGrounded() && !climb.IsClimbing)
         {
-            isGroundPounding = true;
-
-            rb.linearVelocity = new Vector3(
-                rb.linearVelocity.x,
-                0f,
-                rb.linearVelocity.z
-            );
+            StartGroundPound();
         }
+    }
 
-        if (isFreezing)
-        {
-            freezeTimer -= Time.deltaTime;
-
-            if (freezeTimer <= 0f)
-            {
-                isFreezing = false;
-                rb.constraints = RigidbodyConstraints.FreezeRotation; 
-            }
-        }
+    void StartGroundPound()
+    {
+        IsGroundPounding = true;
+        rb.linearVelocity = new Vector3(0, slamSpeed, 0);
     }
 
     private void FixedUpdate()
     {
-        if (isGroundPounding)
+        if (IsGroundPounding)
         {
-            rb.linearVelocity = new Vector3(
-                rb.linearVelocity.x,
-                -groundPoundForce,
-                rb.linearVelocity.z
-            );
-
-            if (movement.IsGrounded())
+            if (move.IsGrounded())
             {
-                isGroundPounding = false;
-                StartFreeze();
+                IsGroundPounding = false;
             }
         }
-    }
-
-    private void StartFreeze()
-    {
-        isFreezing = true;
-        freezeTimer = landingFreezeTime;
-
-        rb.constraints = RigidbodyConstraints.FreezePosition | RigidbodyConstraints.FreezeRotation;
     }
 }
