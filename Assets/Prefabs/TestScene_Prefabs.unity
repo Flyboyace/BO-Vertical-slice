@@ -329,7 +329,11 @@ PrefabInstance:
     - target: {fileID: 1444513789739571321, guid: 379952e7fa04069458d6e504d6a87b53, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: a02f77e0682156745998b22b46b5217e, type: 2}
+      objectReference: {fileID: 2100000, guid: d6d55e99a8ca4044e9398f42536d2234, type: 2}
+    - target: {fileID: 2275079855915472138, guid: 379952e7fa04069458d6e504d6a87b53, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: f5c6a83855bd7f24c93a40b0f1d5a53b, type: 2}
     - target: {fileID: 5036406679556061355, guid: 379952e7fa04069458d6e504d6a87b53, type: 3}
       propertyPath: m_Name
       value: M6BO_TimerLow_AmyKema
