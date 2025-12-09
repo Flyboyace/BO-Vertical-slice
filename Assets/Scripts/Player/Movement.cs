@@ -4,20 +4,19 @@ public class Movement : MonoBehaviour
 {
     [SerializeField] private float movementSpeed = 5f;
 
+    [Header("Jump Settings")]
     [SerializeField] private float jumpForce = 8f;
-    [SerializeField] private float holdJumpForce = 4f;
-    [SerializeField] private float maxHoldTime = 0.2f;
+    [SerializeField] private float fallGravityMultiplier = 3f;
+    [SerializeField] private float lowJumpGravityMultiplier = 2f;
 
-    private float jumpHoldTimer = 0f;
-    private bool isJumping = false;
-    private Rigidbody rb;
+    [Header("Speed Boost")]
+    [SerializeField] private float timeToSpeedBoost = 2.5f;
 
     private float runTimer = 0f;
     private float speedMultiplier = 1f;
-    private float timeToSpeedBoost = 2.5f;
 
     private Vector3 inputDirection;
-
+    private Rigidbody rb;
     private Groundpound groundpound;
 
     private void Start()
@@ -57,10 +56,26 @@ public class Movement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Vector3 horizontalVelocity = inputDirection * movementSpeed * speedMultiplier;
-        Vector3 verticalVelocity = new Vector3(0, rb.linearVelocity.y, 0);
+        
+        Vector3 horizontalVel = inputDirection * movementSpeed * speedMultiplier;
 
-        rb.linearVelocity = horizontalVelocity + verticalVelocity;
+        rb.linearVelocity = new Vector3(
+            horizontalVel.x,
+            rb.linearVelocity.y,
+            horizontalVel.z
+        );
+
+        
+        if (rb.linearVelocity.y < 0) 
+        {
+            rb.AddForce(Vector3.up * Physics.gravity.y * (fallGravityMultiplier - 1f),
+                ForceMode.Acceleration);
+        }
+        else if (rb.linearVelocity.y > 0 && !Input.GetKey(KeyCode.Space)) 
+        {
+            rb.AddForce(Vector3.up * Physics.gravity.y * (lowJumpGravityMultiplier - 1f),
+                ForceMode.Acceleration);
+        }
     }
 
     private void HandleJumpInput()
@@ -68,26 +83,6 @@ public class Movement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && IsGrounded())
         {
             rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
-            isJumping = true;
-            jumpHoldTimer = 0f;
-        }
-
-        if (Input.GetKey(KeyCode.Space) && isJumping)
-        {
-            if (jumpHoldTimer < maxHoldTime)
-            {
-                rb.AddForce(Vector3.up * holdJumpForce, ForceMode.Acceleration);
-                jumpHoldTimer += Time.deltaTime;
-            }
-            else
-            {
-                isJumping = false;
-            }
-        }
-
-        if (Input.GetKeyUp(KeyCode.Space))
-        {
-            isJumping = false;
         }
     }
 
