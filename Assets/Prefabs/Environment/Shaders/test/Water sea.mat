@@ -42,11 +42,11 @@ Material:
     - _QueueControl: 0
     - _QueueOffset: 0
     - _Water_depth: 131.19
-    - _Wave_Frequency: -0.17
+    - _Wave_Frequency: -39.8
     - _Wave_amplitude: 0.09
     - _Wave_speed: 1.24
-    - _spec_density: -24.4
-    - _spec_thickness: 4.3
+    - _spec_density: -79.6
+    - _spec_thickness: 4.99
     - _specul_speed: -0.65
     m_Colors:
     - _Deep_color: {r: 0.1301175, g: 0.44960597, b: 0.8113208, a: 1}
