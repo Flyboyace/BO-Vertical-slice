@@ -7356,9 +7356,11 @@ MonoBehaviour:
   speed: 28
   boostedSpeed: 43
   timeToSpeedBoost: 2.5
-  jumpForce: 17
-  fallGravityMultiplier: 6
+  jumpForce: 19
+  fallGravityMultiplier: 8
   lowJumpGravityMultiplier: 4
+  maxJumpHoldTime: 0.05
+  jumpHoldForce: 20
 --- !u!114 &3526611517732137585
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7388,12 +7390,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0153366a21ead0f45849c3a34482418c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CatClimb
-  climbUpSpeed: 3
-  climbDownSpeed: 2
-  slideDownSpeed: 1.2
+  climbSpeed: 3
+  slideSpeed: 2
   wallCheckDistance: 0.6
-  detachPushForce: 5
-  jumpOffKey: 32
+  climbableMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!23 &3533290052574375436
 MeshRenderer:
   m_ObjectHideFlags: 0
