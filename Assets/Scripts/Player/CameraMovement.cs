@@ -9,6 +9,7 @@ public class CameraMovement : MonoBehaviour
 
     void Start()
     {
+        isOnCamEdge = false;
     }
 
     // Update is called once per frame

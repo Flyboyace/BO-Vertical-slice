@@ -1,4 +1,3 @@
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -19,7 +18,7 @@ public class CoinPickup : MonoBehaviour
         }
         if (collision.gameObject.tag == "GreenStar")
         {
-            
+         //TBD   
         }
     }
 
@@ -30,7 +29,7 @@ public class CoinPickup : MonoBehaviour
     }
     private void GreenStar()
     { 
-        
+       //TBD 
     }
 }
 
