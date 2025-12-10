@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
@@ -15,31 +15,39 @@ public class Movement : MonoBehaviour
     private Rigidbody rb;
     private GroundPound gp;
     private Climb climb;
+    private CatDive dive;
 
     private Vector3 input;
 
     private float runTimer = 0f;
     private bool isBoosted = false;
 
+    // ★ NEW — dive direction support
+    public Vector3 LastMoveDirection { get; private set; }
+
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
         gp = GetComponent<GroundPound>();
         climb = GetComponent<Climb>();
+        dive = GetComponent<CatDive>();
 
         rb.freezeRotation = true;
     }
 
     private void Update()
     {
-        if (gp.IsGroundPounding || climb.IsClimbing)
+        // Disable movement while special actions run
+        if (gp.IsGroundPounding || climb.IsClimbing || (dive != null && dive.IsFreezing) || (dive != null && dive.IsDiving))
             return;
 
         float h = Input.GetAxisRaw("Horizontal");
         float v = Input.GetAxisRaw("Vertical");
 
+        // Your inverted controls
         input = new Vector3(-h, 0, -v).normalized;
 
+        // Boost logic
         if (input.sqrMagnitude > 0.01f)
         {
             runTimer += Time.deltaTime;
@@ -53,6 +61,7 @@ public class Movement : MonoBehaviour
             isBoosted = false;
         }
 
+        // Jump
         if (Input.GetKeyDown(KeyCode.Space) && IsGrounded())
         {
             rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
@@ -61,21 +70,34 @@ public class Movement : MonoBehaviour
 
     private void FixedUpdate()
     {
+        // DO NOT MOVE DURING SPECIAL STATES
         if (gp.IsGroundPounding || climb.IsClimbing)
             return;
 
+        if (dive != null && (dive.IsFreezing || dive.IsDiving))
+            return; // CatDive handles velocity
+
         float currentSpeed = isBoosted ? boostedSpeed : speed;
 
+        // Convert local input to world movement
         Vector3 moveDirection =
             transform.right * input.x +
             transform.forward * input.z;
 
+        // ★ NEW — store last movement direction
+        if (moveDirection.sqrMagnitude > 0.01f)
+        {
+            LastMoveDirection = moveDirection.normalized;
+        }
+
+        // Apply horizontal movement
         rb.linearVelocity = new Vector3(
             moveDirection.x * currentSpeed,
             rb.linearVelocity.y,
             moveDirection.z * currentSpeed
         );
 
+        // Better jumping / falling
         if (rb.linearVelocity.y < 0)
         {
             rb.AddForce(Vector3.up * Physics.gravity.y * (fallGravityMultiplier - 1f),

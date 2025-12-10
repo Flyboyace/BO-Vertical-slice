@@ -8,8 +8,10 @@ public class Climb : MonoBehaviour
 
     public bool IsClimbing { get; private set; }
 
-    Rigidbody rb;
-    GroundPound gp;
+    private Rigidbody rb;
+    private GroundPound gp;
+
+    float verticalInput;
 
     private void Start()
     {
@@ -17,9 +19,15 @@ public class Climb : MonoBehaviour
         gp = GetComponent<GroundPound>();
     }
 
+    private void Update()
+    {
+        verticalInput = Input.GetAxisRaw("Vertical"); // read input from Update
+    }
+
     private void FixedUpdate()
     {
-        if (gp.IsGroundPounding)
+        // Ground pound cancels climb
+        if (gp != null && gp.IsGroundPounding)
         {
             StopClimbing();
             return;
@@ -31,21 +39,33 @@ public class Climb : MonoBehaviour
         {
             rb.useGravity = false;
 
-            float v = Input.GetAxisRaw("Vertical");
-            rb.linearVelocity = Vector3.up * v * climbSpeed;
+            // KEEP horizontal movement from your movement script
+            Vector3 vel = rb.linearVelocity;
+
+            // Only REPLACE vertical movement
+            vel.y = verticalInput * climbSpeed;
+
+            rb.linearVelocity = vel;
         }
     }
 
     void CheckClimb()
     {
         Vector3 origin = transform.position + Vector3.up * 1f;
+        Vector3 forward = transform.forward;
 
-        if (Physics.Raycast(origin, transform.forward, climbCheckDistance, climbableMask))
+        Debug.DrawRay(origin, forward * climbCheckDistance, Color.green);
+
+        if (Physics.Raycast(origin, forward, climbCheckDistance, climbableMask))
         {
             if (!IsClimbing)
             {
                 IsClimbing = true;
-                rb.linearVelocity = Vector3.zero;
+
+                // Stop vertical motion ONLY. (Do NOT stop horizontal.)
+                Vector3 vel = rb.linearVelocity;
+                vel.y = 0f;
+                rb.linearVelocity = vel;
             }
         }
         else

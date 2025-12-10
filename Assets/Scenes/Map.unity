@@ -7238,6 +7238,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2823903032162106328, guid: 58136c89ae891a246ab21ddaeec4a33b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 3526611517732137581}
+    - targetCorrespondingSourceObject: {fileID: 2823903032162106328, guid: 58136c89ae891a246ab21ddaeec4a33b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3526611517732137585}
   m_SourcePrefab: {fileID: 100100000, guid: 58136c89ae891a246ab21ddaeec4a33b, type: 3}
 --- !u!1 &3526611517732137571 stripped
 GameObject:
@@ -7351,7 +7354,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d635e3952faacdf4e92aac61ee1a5d8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GroundPound
+  hoverTime: 0.2
   slamSpeed: -110
+  impactFreezeTime: 0.5
   groundPoundKey: 122
 --- !u!114 &3526611517732137583
 MonoBehaviour:
@@ -7365,12 +7370,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57b9d78a48abe6e44bdd3db033ae7164, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Movement
-  speed: 30
-  boostedSpeed: 40
+  speed: 28
+  boostedSpeed: 43
   timeToSpeedBoost: 2.5
   jumpForce: 17
   fallGravityMultiplier: 6
   lowJumpGravityMultiplier: 4
+--- !u!114 &3526611517732137585
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3526611517732137571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92af47c715252824a8a8f2049af8d910, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Dive
+  diveSpeed: 80
+  downwardStrength: 0.8
+  recoveryTime: 0.4
+  freezeTime: 0.4
+  diveKey: 120
+  debugLogs: 1
 --- !u!23 &3533290052574375436
 MeshRenderer:
   m_ObjectHideFlags: 0
