@@ -103,7 +103,7 @@ Material:
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
-    - _Opacity: 0.768
+    - _Opacity: 0.68
     - _Parallax: 0.005
     - _QueueControl: 0
     - _QueueOffset: 0
@@ -122,13 +122,13 @@ Material:
     - _WorkflowMode: 1
     - _XRMotionVectorsPass: 1
     - _ZWrite: 1
-    - _spec_density: -2.12
-    - _spec_thickness: 3.19
+    - _spec_density: 0.97
+    - _spec_thickness: 3.57
     - _specul_speed: 0.64
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _Deep_color: {r: 0.15472585, g: 0.4386815, b: 0.5377358, a: 0.5254902}
+    - _Deep_color: {r: 0.15472579, g: 0.43868145, b: 0.5377357, a: 0.83137256}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _Shallow_color: {r: 1, g: 1, b: 1, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}

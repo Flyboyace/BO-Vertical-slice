@@ -45,13 +45,13 @@ Material:
     - _Wave_Frequency: -0.17
     - _Wave_amplitude: 0.09
     - _Wave_speed: 1.24
-    - _spec_density: -10.13
-    - _spec_thickness: 3.7
+    - _spec_density: -24.4
+    - _spec_thickness: 4.3
     - _specul_speed: -0.65
     m_Colors:
     - _Deep_color: {r: 0.1301175, g: 0.44960597, b: 0.8113208, a: 1}
-    - _Shallow_color: {r: 0.58717513, g: 0.6600051, b: 0.8584906, a: 1}
-    - _spec_color: {r: 0.63321024, g: 0.8527609, b: 0.9009434, a: 1}
+    - _Shallow_color: {r: 0.587175, g: 0.6600051, b: 0.8584906, a: 1}
+    - _spec_color: {r: 0.6332102, g: 0.8527609, b: 0.9009434, a: 0.7490196}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
 --- !u!114 &3916444887177273457
