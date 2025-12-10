@@ -14,7 +14,7 @@ public class Movement : MonoBehaviour
 
     private Rigidbody rb;
     private GroundPound gp;
-    private Climb climb;
+    private CatClimb climb;
     private CatDive dive;
 
     private Vector3 input;
@@ -29,7 +29,7 @@ public class Movement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         gp = GetComponent<GroundPound>();
-        climb = GetComponent<Climb>();
+        climb = GetComponent<CatClimb>();
         dive = GetComponent<CatDive>();
 
         rb.freezeRotation = true;

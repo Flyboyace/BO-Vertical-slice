@@ -19,7 +19,7 @@ public class CatDive : MonoBehaviour
     Rigidbody rb;
     Movement movement;
     GroundPound gp;
-    Climb climb;
+    CatClimb climb;
 
     float freezeTimer;
     float recoveryTimer;
@@ -31,7 +31,7 @@ public class CatDive : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         movement = GetComponent<Movement>();
         gp = GetComponent<GroundPound>();
-        climb = GetComponent<Climb>();
+        climb = GetComponent<CatClimb>();
     }
 
     private void Update()

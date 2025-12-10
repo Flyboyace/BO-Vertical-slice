@@ -12,7 +12,7 @@ public class GroundPound : MonoBehaviour
 
     private Rigidbody rb;
     private Movement move;
-    private Climb climb;
+    private CatClimb climb;
 
     private bool isHovering = false;
     private bool isImpactFreezing = false;
@@ -21,7 +21,7 @@ public class GroundPound : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         move = GetComponent<Movement>();
-        climb = GetComponent<Climb>();
+        climb = GetComponent<CatClimb>();
     }
 
     private void Update()
