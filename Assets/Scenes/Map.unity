@@ -7237,10 +7237,10 @@ PrefabInstance:
       addedObject: {fileID: 3526611517732137582}
     - targetCorrespondingSourceObject: {fileID: 2823903032162106328, guid: 58136c89ae891a246ab21ddaeec4a33b, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 3526611517732137581}
+      addedObject: {fileID: 3526611517732137585}
     - targetCorrespondingSourceObject: {fileID: 2823903032162106328, guid: 58136c89ae891a246ab21ddaeec4a33b, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 3526611517732137585}
+      addedObject: {fileID: 3526611517732137586}
   m_SourcePrefab: {fileID: 100100000, guid: 58136c89ae891a246ab21ddaeec4a33b, type: 3}
 --- !u!1 &3526611517732137571 stripped
 GameObject:
@@ -7325,23 +7325,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 2
---- !u!114 &3526611517732137581
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3526611517732137571}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e5a6fa7203eceed4c8498080d3d76fcf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Climb
-  climbSpeed: 6
-  climbCheckDistance: 0.6
-  climbableMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
 --- !u!114 &3526611517732137582
 MonoBehaviour:
   m_ObjectHideFlags: 0
