@@ -22,15 +22,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 88256806118816238, guid: 460388ea49ec4af4e857edbb61e8205c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 494.1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 88256806118816238, guid: 460388ea49ec4af4e857edbb61e8205c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 155.04
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 88256806118816238, guid: 460388ea49ec4af4e857edbb61e8205c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -64.2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 88256806118816238, guid: 460388ea49ec4af4e857edbb61e8205c, type: 3}
       propertyPath: m_LocalRotation.w
@@ -66,7 +66,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 752767117061301076, guid: 460388ea49ec4af4e857edbb61e8205c, type: 3}
       propertyPath: m_Name
-      value: big bush_low (1)
+      value: Bushy_Animation
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
