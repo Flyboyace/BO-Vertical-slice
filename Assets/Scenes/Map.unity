@@ -282,7 +282,6 @@ GameObject:
   - component: {fileID: 1899272281}
   - component: {fileID: 1899272285}
   - component: {fileID: 1899272284}
-  - component: {fileID: 1899272286}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -430,26 +429,6 @@ MonoBehaviour:
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
   m_Version: 2
---- !u!114 &1899272286
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1899272280}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2998b9349a76b2a4a8f3a58f5a50eaa5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Mario3DWorldCamera
-  target: {fileID: 3526611517732137572}
-  offset: {x: -50, y: 67, z: 67}
-  smoothTime: 0.25
-  lookAheadDistance: 2
-  lookAheadSmoothTime: 0.2
-  useBounds: 0
-  minBounds: {x: 0, y: 0}
-  maxBounds: {x: 0, y: 0}
 --- !u!33 &19156296130505642
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -7261,22 +7240,11 @@ PrefabInstance:
       addedObject: {fileID: 3526611517732137581}
     - targetCorrespondingSourceObject: {fileID: 2823903032162106328, guid: 58136c89ae891a246ab21ddaeec4a33b, type: 3}
       insertIndex: -1
-<<<<<<< Updated upstream
-=======
       addedObject: {fileID: 3526611517732137585}
-    - targetCorrespondingSourceObject: {fileID: 2823903032162106328, guid: 58136c89ae891a246ab21ddaeec4a33b, type: 3}
-      insertIndex: -1
->>>>>>> Stashed changes
-      addedObject: {fileID: 3526611517732137586}
   m_SourcePrefab: {fileID: 100100000, guid: 58136c89ae891a246ab21ddaeec4a33b, type: 3}
 --- !u!1 &3526611517732137571 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2823903032162106328, guid: 58136c89ae891a246ab21ddaeec4a33b, type: 3}
-  m_PrefabInstance: {fileID: 3526611517732137570}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &3526611517732137572 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3205248417040949602, guid: 58136c89ae891a246ab21ddaeec4a33b, type: 3}
   m_PrefabInstance: {fileID: 3526611517732137570}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &3526611517732137574
@@ -7305,14 +7273,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2998b9349a76b2a4a8f3a58f5a50eaa5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CameraMovement
-  target: {fileID: 0}
-  offset: {x: 0, y: 8, z: -10}
-  smoothTime: 0.25
-  lookAheadDistance: 2
-  lookAheadSmoothTime: 0.2
-  useBounds: 0
-  minBounds: {x: 0, y: 0}
-  maxBounds: {x: 0, y: 0}
+  playerPos: {fileID: 0}
+  isOnCamEdge: 0
 --- !u!136 &3526611517732137578
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -7442,7 +7404,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 3526611517732137571}
   m_Enabled: 1
   m_EditorHideFlags: 0
-<<<<<<< Updated upstream
   m_Script: {fileID: 11500000, guid: 0153366a21ead0f45849c3a34482418c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CatClimb
@@ -7452,19 +7413,6 @@ MonoBehaviour:
   climbableMask:
     serializedVersion: 2
     m_Bits: 64
-=======
-  m_Script: {fileID: 11500000, guid: 2998b9349a76b2a4a8f3a58f5a50eaa5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CameraMovement
-  target: {fileID: 0}
-  offset: {x: 0, y: 8, z: -10}
-  smoothTime: 0.25
-  lookAheadDistance: 2
-  lookAheadSmoothTime: 0.2
-  useBounds: 0
-  minBounds: {x: 0, y: 0}
-  maxBounds: {x: 0, y: 0}
->>>>>>> Stashed changes
 --- !u!23 &3533290052574375436
 MeshRenderer:
   m_ObjectHideFlags: 0
