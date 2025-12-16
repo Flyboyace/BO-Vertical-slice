@@ -27,7 +27,7 @@ public class CatWallClimb : MonoBehaviour
             TryStartClimbing();
 
         // Stop climbing manually (jump off)
-        if (isClimbing && Input.GetKeyDown(KeyCode.Space))
+        if (isClimbing && Input.GetKeyDown(KeyCode.W))
         {
             StopClimbing();
         }
@@ -78,13 +78,9 @@ public class CatWallClimb : MonoBehaviour
         else
             rb.linearVelocity = Vector3.down * slideSpeed;
 
-        // Keep player stuck to the wall
         rb.position -= wallNormal * 0.03f;
 
-        // -------------------------------
-        //   STOP CLIMBING AT WALL TOP
-        // -------------------------------
-
+        
         Vector3 rayOrigin = transform.position + Vector3.up * 1f;
 
         // Raycast *towards* the wall. If it misses, we reached the top.
