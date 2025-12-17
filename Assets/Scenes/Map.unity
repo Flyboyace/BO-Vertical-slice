@@ -7383,10 +7383,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57b9d78a48abe6e44bdd3db033ae7164, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Movement
-  walkSpeed: 40
-  runSpeed: 50
+  walkSpeed: 50
+  runSpeed: 60
   timeToRun: 2.5
-  deceleration: 40
+  deceleration: 70
   rotationSpeed: 12
   jumpForce: 17
   maxJumpHoldTime: 0.25
@@ -7423,11 +7423,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CatClimb
   climbSpeed: 20
-  slideSpeed: 10
   wallCheckDistance: 0.6
   climbableMask:
     serializedVersion: 2
     m_Bits: 64
+  maxStamina: 100
+  staminaDrain: 20
+  staminaRegen: 20
 --- !u!4 &3526611517732137587 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3205248417040949602, guid: 58136c89ae891a246ab21ddaeec4a33b, type: 3}

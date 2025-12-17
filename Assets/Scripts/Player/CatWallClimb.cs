@@ -4,33 +4,43 @@ public class CatWallClimb : MonoBehaviour
 {
     [Header("Climbing Settings")]
     public float climbSpeed = 4f;
-    public float slideSpeed = 2f;
     public float wallCheckDistance = 0.6f;
     public LayerMask climbableMask;
 
+    [Header("Stamina Settings")]
+    public float maxStamina = 100f;
+    public float staminaDrain = 20f;   // per second when climbing up
+    public float staminaRegen = 25f;   // per second when not climbing
+
+    private float currentStamina;
+
     private Rigidbody rb;
     private bool isClimbing = false;
-
     private Vector3 wallNormal;
 
     public bool IsClimbing => isClimbing;
+    public float Stamina => currentStamina;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
+        currentStamina = maxStamina;
     }
 
     private void Update()
     {
-        // Start climbing
+        // Regenerate stamina when NOT climbing
+        if (!isClimbing)
+        {
+            currentStamina = Mathf.Min(
+                currentStamina + staminaRegen * Time.deltaTime,
+                maxStamina
+            );
+        }
+
+        // Try to start climbing
         if (!isClimbing)
             TryStartClimbing();
-
-        // Stop climbing manually (jump off)
-        if (isClimbing && Input.GetKeyDown(KeyCode.W))
-        {
-            StopClimbing();
-        }
     }
 
     private void FixedUpdate()
@@ -43,12 +53,12 @@ public class CatWallClimb : MonoBehaviour
     {
         RaycastHit hit;
 
-        // Check in front of player
-        if (Physics.Raycast(transform.position + Vector3.up * 1f,
-                            transform.forward,
-                            out hit,
-                            wallCheckDistance,
-                            climbableMask))
+        if (Physics.Raycast(
+            transform.position + Vector3.up * 1f,
+            transform.forward,
+            out hit,
+            wallCheckDistance,
+            climbableMask))
         {
             wallNormal = hit.normal;
             StartClimbing();
@@ -66,28 +76,40 @@ public class CatWallClimb : MonoBehaviour
     {
         float v = Input.GetAxisRaw("Vertical");
 
-        // Move UP
-        if (v > 0.1f)
-            rb.linearVelocity = Vector3.up * climbSpeed;
-
-        // Move DOWN
-        else if (v < -0.1f)
-            rb.linearVelocity = Vector3.down * climbSpeed;
-
-        // Sliding motion when no input
-        else
-            rb.linearVelocity = Vector3.down * slideSpeed;
-
-        rb.position -= wallNormal * 0.03f;
-
-        
-        Vector3 rayOrigin = transform.position + Vector3.up * 1f;
-
-        // Raycast *towards* the wall. If it misses, we reached the top.
-        if (!Physics.Raycast(rayOrigin, -wallNormal, wallCheckDistance, climbableMask))
+        // 🚪 NO INPUT → DETACH
+        if (Mathf.Abs(v) < 0.1f)
         {
             StopClimbing();
             return;
+        }
+
+        // ⬆ CLIMB UP (needs stamina)
+        if (v > 0.1f)
+        {
+            if (currentStamina <= 0f)
+            {
+                StopClimbing();
+                return;
+            }
+
+            currentStamina -= staminaDrain * Time.fixedDeltaTime;
+            currentStamina = Mathf.Max(currentStamina, 0f);
+
+            rb.linearVelocity = Vector3.up * climbSpeed;
+            rb.position -= wallNormal * 0.03f;
+        }
+        // ⬇ CLIMB DOWN
+        else if (v < -0.1f)
+        {
+            rb.linearVelocity = Vector3.down * climbSpeed;
+        }
+
+        Vector3 rayOrigin = transform.position + Vector3.up * 1f;
+
+        // Wall lost → detach
+        if (!Physics.Raycast(rayOrigin, -wallNormal, wallCheckDistance, climbableMask))
+        {
+            StopClimbing();
         }
     }
 
@@ -95,5 +117,8 @@ public class CatWallClimb : MonoBehaviour
     {
         isClimbing = false;
         rb.useGravity = true;
+
+        // Push away slightly to avoid sticking
+        rb.AddForce(wallNormal * 2f, ForceMode.VelocityChange);
     }
 }
