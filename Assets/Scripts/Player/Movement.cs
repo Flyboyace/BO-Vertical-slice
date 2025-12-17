@@ -57,10 +57,12 @@ public class Movement : MonoBehaviour
         float h = 0f;
         float v = 0f;
 
-        if (Input.GetKey(KeyCode.A)) h = -1f;
-        if (Input.GetKey(KeyCode.D)) h = 1f;
-        if (Input.GetKey(KeyCode.W)) v = 1f;
-        if (Input.GetKey(KeyCode.S)) v = -1f;
+        /*why the does w = -1f and how the fuck does it work?*/
+
+        if (Input.GetKey(KeyCode.A)) h = 1f;
+        if (Input.GetKey(KeyCode.D)) h = -1f;
+        if (Input.GetKey(KeyCode.W)) v = -1f;
+        if (Input.GetKey(KeyCode.S)) v = 1f;
 
         input = new Vector3(h, 0f, v).normalized;
 
