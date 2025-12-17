@@ -282,6 +282,7 @@ GameObject:
   - component: {fileID: 1899272281}
   - component: {fileID: 1899272285}
   - component: {fileID: 1899272284}
+  - component: {fileID: 1899272286}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -429,6 +430,28 @@ MonoBehaviour:
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
   m_Version: 2
+--- !u!114 &1899272286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1899272280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2998b9349a76b2a4a8f3a58f5a50eaa5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CameraMovement
+  target: {fileID: 3526611517732137587}
+  offset: {x: 93.5, y: 70.3, z: -104.9}
+  smoothTime: 0.25
+  lookAheadDistance: 2
+  lookAheadSmoothTime: 0.2
+  useBounds: 0
+  minBounds: {x: 0, y: 0}
+  maxBounds: {x: 0, y: 0}
+  playerPos: {fileID: 0}
+  isOnCamEdge: 0
 --- !u!33 &19156296130505642
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -7191,7 +7214,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3205248417040949602, guid: 58136c89ae891a246ab21ddaeec4a33b, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3205248417040949602, guid: 58136c89ae891a246ab21ddaeec4a33b, type: 3}
       propertyPath: m_LocalRotation.y
@@ -7199,7 +7222,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3205248417040949602, guid: 58136c89ae891a246ab21ddaeec4a33b, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3205248417040949602, guid: 58136c89ae891a246ab21ddaeec4a33b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -7336,8 +7359,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57b9d78a48abe6e44bdd3db033ae7164, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Movement
-  speed: 40
-  acceleration: 50
+  walkSpeed: 40
+  runSpeed: 50
+  timeToRun: 2.5
   deceleration: 40
   rotationSpeed: 12
   jumpForce: 17
@@ -7380,6 +7404,11 @@ MonoBehaviour:
   climbableMask:
     serializedVersion: 2
     m_Bits: 64
+--- !u!4 &3526611517732137587 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3205248417040949602, guid: 58136c89ae891a246ab21ddaeec4a33b, type: 3}
+  m_PrefabInstance: {fileID: 3526611517732137570}
+  m_PrefabAsset: {fileID: 0}
 --- !u!23 &3533290052574375436
 MeshRenderer:
   m_ObjectHideFlags: 0

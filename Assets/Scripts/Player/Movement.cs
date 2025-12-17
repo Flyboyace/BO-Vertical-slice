@@ -3,8 +3,9 @@
 public class Movement : MonoBehaviour
 {
     [Header("Movement")]
-    public float speed = 6f;
-    public float acceleration = 25f;
+    public float walkSpeed = 4f;
+    public float runSpeed = 7f;
+    public float timeToRun = 0.4f;
     public float deceleration = 40f;
 
     [Header("Rotation")]
@@ -25,6 +26,7 @@ public class Movement : MonoBehaviour
     private Vector3 input;
     private Vector3 moveDirection;
 
+    private float moveTimer;
     private bool isJumping;
     private float jumpHoldTimer;
 
@@ -48,6 +50,7 @@ public class Movement : MonoBehaviour
             (dive != null && (dive.IsFreezing || dive.IsDiving)))
         {
             input = Vector3.zero;
+            moveTimer = 0f;
             return;
         }
 
@@ -61,7 +64,7 @@ public class Movement : MonoBehaviour
 
         input = new Vector3(h, 0f, v).normalized;
 
-        // Start jump
+        // Jump
         if (Input.GetKeyDown(KeyCode.Space) && IsGrounded())
         {
             rb.linearVelocity = new Vector3(rb.linearVelocity.x, 0f, rb.linearVelocity.z);
@@ -71,7 +74,6 @@ public class Movement : MonoBehaviour
             jumpHoldTimer = 0f;
         }
 
-        // Stop jump early
         if (Input.GetKeyUp(KeyCode.Space))
         {
             isJumping = false;
@@ -98,17 +100,24 @@ public class Movement : MonoBehaviour
             angle = Mathf.Round(angle / 45f) * 45f;
             moveDirection = Quaternion.Euler(0f, angle, 0f) * Vector3.forward;
 
+            // Reset timer if direction changes
+            if (Vector3.Dot(moveDirection, LastMoveDirection) < 0.9f)
+                moveTimer = 0f;
+
             LastMoveDirection = moveDirection;
 
-            Vector3 targetVelocity = moveDirection * speed;
+            moveTimer += Time.fixedDeltaTime;
+
+            float targetSpeed = (moveTimer >= timeToRun) ? runSpeed : walkSpeed;
+            Vector3 targetVelocity = moveDirection * targetSpeed;
 
             horizontalVel = Vector3.MoveTowards(
                 horizontalVel,
                 targetVelocity,
-                acceleration * Time.fixedDeltaTime
+                deceleration * Time.fixedDeltaTime
             );
 
-            // Rotate only when walking
+            // Rotate to face movement direction
             Quaternion targetRotation = Quaternion.LookRotation(moveDirection, Vector3.up);
             rb.MoveRotation(
                 Quaternion.Slerp(rb.rotation, targetRotation, rotationSpeed * Time.fixedDeltaTime)
@@ -116,6 +125,8 @@ public class Movement : MonoBehaviour
         }
         else
         {
+            moveTimer = 0f;
+
             horizontalVel = Vector3.MoveTowards(
                 horizontalVel,
                 Vector3.zero,
@@ -123,10 +134,13 @@ public class Movement : MonoBehaviour
             );
         }
 
-        // Apply horizontal movement
-        rb.linearVelocity = new Vector3(horizontalVel.x, rb.linearVelocity.y, horizontalVel.z);
+        rb.linearVelocity = new Vector3(
+            horizontalVel.x,
+            rb.linearVelocity.y,
+            horizontalVel.z
+        );
 
-        // VARIABLE JUMP HEIGHT (Mario-style)
+        // Variable jump height
         if (isJumping && Input.GetKey(KeyCode.Space))
         {
             jumpHoldTimer += Time.fixedDeltaTime;
@@ -136,7 +150,7 @@ public class Movement : MonoBehaviour
             }
         }
 
-        // Better gravity
+        // Gravity tweaks
         if (rb.linearVelocity.y < 0f)
         {
             rb.AddForce(
