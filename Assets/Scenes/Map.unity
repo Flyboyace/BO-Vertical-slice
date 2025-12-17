@@ -7341,6 +7341,10 @@ MonoBehaviour:
   deceleration: 40
   rotationSpeed: 12
   jumpForce: 17
+  maxJumpHoldTime: 0.25
+  jumpHoldForce: 17
+  fallGravityMultiplier: 8
+  lowJumpGravityMultiplier: 4
 --- !u!114 &3526611517732137585
 MonoBehaviour:
   m_ObjectHideFlags: 0

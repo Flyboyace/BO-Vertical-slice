@@ -12,6 +12,10 @@ public class Movement : MonoBehaviour
 
     [Header("Jumping")]
     public float jumpForce = 7f;
+    public float maxJumpHoldTime = 0.25f;
+    public float jumpHoldForce = 20f;
+    public float fallGravityMultiplier = 2.5f;
+    public float lowJumpGravityMultiplier = 3.5f;
 
     private Rigidbody rb;
     private GroundPound gp;
@@ -20,6 +24,9 @@ public class Movement : MonoBehaviour
 
     private Vector3 input;
     private Vector3 moveDirection;
+
+    private bool isJumping;
+    private float jumpHoldTimer;
 
     public Vector3 LastMoveDirection { get; private set; }
 
@@ -31,7 +38,7 @@ public class Movement : MonoBehaviour
         dive = GetComponent<CatDive>();
 
         rb.freezeRotation = true;
-        rb.linearDamping = 0f; // we handle deceleration manually
+        rb.linearDamping = 0f;
     }
 
     private void Update()
@@ -54,9 +61,20 @@ public class Movement : MonoBehaviour
 
         input = new Vector3(h, 0f, v).normalized;
 
+        // Start jump
         if (Input.GetKeyDown(KeyCode.Space) && IsGrounded())
         {
+            rb.linearVelocity = new Vector3(rb.linearVelocity.x, 0f, rb.linearVelocity.z);
             rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+
+            isJumping = true;
+            jumpHoldTimer = 0f;
+        }
+
+        // Stop jump early
+        if (Input.GetKeyUp(KeyCode.Space))
+        {
+            isJumping = false;
         }
     }
 
@@ -73,7 +91,6 @@ public class Movement : MonoBehaviour
 
         if (input.sqrMagnitude > 0.01f)
         {
-            // WORLD SPACE movement
             moveDirection = new Vector3(input.x, 0f, input.z);
 
             // Snap to 8 directions
@@ -85,14 +102,13 @@ public class Movement : MonoBehaviour
 
             Vector3 targetVelocity = moveDirection * speed;
 
-            // Accelerate toward target
             horizontalVel = Vector3.MoveTowards(
                 horizontalVel,
                 targetVelocity,
                 acceleration * Time.fixedDeltaTime
             );
 
-            // Rotate ONLY when walking
+            // Rotate only when walking
             Quaternion targetRotation = Quaternion.LookRotation(moveDirection, Vector3.up);
             rb.MoveRotation(
                 Quaternion.Slerp(rb.rotation, targetRotation, rotationSpeed * Time.fixedDeltaTime)
@@ -100,7 +116,6 @@ public class Movement : MonoBehaviour
         }
         else
         {
-            // Strong ground deceleration (removes ice feeling)
             horizontalVel = Vector3.MoveTowards(
                 horizontalVel,
                 Vector3.zero,
@@ -108,11 +123,34 @@ public class Movement : MonoBehaviour
             );
         }
 
-        rb.linearVelocity = new Vector3(
-            horizontalVel.x,
-            rb.linearVelocity.y,
-            horizontalVel.z
-        );
+        // Apply horizontal movement
+        rb.linearVelocity = new Vector3(horizontalVel.x, rb.linearVelocity.y, horizontalVel.z);
+
+        // VARIABLE JUMP HEIGHT (Mario-style)
+        if (isJumping && Input.GetKey(KeyCode.Space))
+        {
+            jumpHoldTimer += Time.fixedDeltaTime;
+            if (jumpHoldTimer < maxJumpHoldTime)
+            {
+                rb.AddForce(Vector3.up * jumpHoldForce, ForceMode.Acceleration);
+            }
+        }
+
+        // Better gravity
+        if (rb.linearVelocity.y < 0f)
+        {
+            rb.AddForce(
+                Vector3.up * Physics.gravity.y * (fallGravityMultiplier - 1f),
+                ForceMode.Acceleration
+            );
+        }
+        else if (rb.linearVelocity.y > 0f && !Input.GetKey(KeyCode.Space))
+        {
+            rb.AddForce(
+                Vector3.up * Physics.gravity.y * (lowJumpGravityMultiplier - 1f),
+                ForceMode.Acceleration
+            );
+        }
     }
 
     public bool IsGrounded()
