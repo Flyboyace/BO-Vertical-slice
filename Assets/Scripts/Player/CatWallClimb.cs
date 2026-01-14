@@ -7,10 +7,6 @@ public class CatWallClimb : MonoBehaviour
     public float wallCheckDistance = 0.6f;
     public LayerMask climbableMask;
 
-    [Header("Run / Sprint Settings")]
-    public float sprintMultiplier = 1.8f;                   // climb faster when running
-    public float extraStaminaDrainWhenSprinting = 15f;      // additional drain while sprinting
-
     [Header("Stamina Settings")]
     public float maxStamina = 100f;
     public float staminaDrain = 20f;   // per second when climbing up
@@ -80,14 +76,14 @@ public class CatWallClimb : MonoBehaviour
     {
         float v = Input.GetAxisRaw("Vertical");
 
-        // NO INPUT → DETACH
+        // 🚪 NO INPUT → DETACH
         if (Mathf.Abs(v) < 0.1f)
         {
             StopClimbing();
             return;
         }
 
-        // CLIMB UP (needs stamina)
+        // ⬆ CLIMB UP (needs stamina)
         if (v > 0.1f)
         {
             if (currentStamina <= 0f)
@@ -96,27 +92,13 @@ public class CatWallClimb : MonoBehaviour
                 return;
             }
 
-            bool isSprinting = Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift);
-
-            float speed = climbSpeed;
-            float drain = staminaDrain;
-
-            // Sprint modifier
-            if (isSprinting)
-            {
-                speed *= sprintMultiplier;
-                drain += extraStaminaDrainWhenSprinting;
-            }
-
-            currentStamina -= drain * Time.fixedDeltaTime;
+            currentStamina -= staminaDrain * Time.fixedDeltaTime;
             currentStamina = Mathf.Max(currentStamina, 0f);
 
-            rb.linearVelocity = Vector3.up * speed;
-
-            // keep cat stuck to wall
+            rb.linearVelocity = Vector3.up * climbSpeed;
             rb.position -= wallNormal * 0.03f;
         }
-        // CLIMB DOWN
+        // ⬇ CLIMB DOWN
         else if (v < -0.1f)
         {
             rb.linearVelocity = Vector3.down * climbSpeed;

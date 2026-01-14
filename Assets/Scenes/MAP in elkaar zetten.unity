@@ -7059,6 +7059,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mariotextured Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 1718720258749170079, guid: 0e70e901db0388d40a45eca00647aa1c, type: 3}
+      propertyPath: jumpHoldForce
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1718720258749170079, guid: 0e70e901db0388d40a45eca00647aa1c, type: 3}
+      propertyPath: maxJumpHoldTime
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 2282630862273956758, guid: 0e70e901db0388d40a45eca00647aa1c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 584.68
