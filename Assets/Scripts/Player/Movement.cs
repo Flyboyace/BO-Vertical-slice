@@ -23,12 +23,17 @@ public class Movement : MonoBehaviour
     private CatWallClimb climb;
     private CatDive dive;
 
+    // ANIMATOR
+    private Animator animator;
+
     private Vector3 input;
     private Vector3 moveDirection;
 
     private float moveTimer;
     private bool isJumping;
     private float jumpHoldTimer;
+
+    private bool isRunButtonHeld;
 
     public Vector3 LastMoveDirection { get; private set; }
 
@@ -38,6 +43,9 @@ public class Movement : MonoBehaviour
         gp = GetComponent<GroundPound>();
         climb = GetComponent<CatWallClimb>();
         dive = GetComponent<CatDive>();
+
+        // ANIMATOR
+        animator = GetComponent<Animator>();
 
         rb.freezeRotation = true;
         rb.linearDamping = 0f;
@@ -51,13 +59,15 @@ public class Movement : MonoBehaviour
         {
             input = Vector3.zero;
             moveTimer = 0f;
+
+            // ANIMATOR — stop movement animations
+            animator.SetFloat("Speed", 0f);
+            animator.SetBool("IsGrounded", IsGrounded());
             return;
         }
 
         float h = 0f;
         float v = 0f;
-
-        /*why the does w = -1f and how the fuck does it work?*/
 
         if (Input.GetKey(KeyCode.A)) h = 1f;
         if (Input.GetKey(KeyCode.D)) h = -1f;
@@ -65,6 +75,8 @@ public class Movement : MonoBehaviour
         if (Input.GetKey(KeyCode.S)) v = 1f;
 
         input = new Vector3(h, 0f, v).normalized;
+
+        isRunButtonHeld = Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift);
 
         // Jump
         if (Input.GetKeyDown(KeyCode.Space) && IsGrounded())
@@ -74,12 +86,19 @@ public class Movement : MonoBehaviour
 
             isJumping = true;
             jumpHoldTimer = 0f;
+
+            // ANIMATOR — jump trigger
+            animator.SetTrigger("Jump");
         }
 
         if (Input.GetKeyUp(KeyCode.Space))
         {
             isJumping = false;
         }
+
+        // ANIMATOR — send grounded & falling status
+        animator.SetBool("IsGrounded", IsGrounded());
+        animator.SetBool("IsFalling", rb.linearVelocity.y < -0.1f);
     }
 
     private void FixedUpdate()
@@ -97,12 +116,10 @@ public class Movement : MonoBehaviour
         {
             moveDirection = new Vector3(input.x, 0f, input.z);
 
-            // Snap to 8 directions
             float angle = Mathf.Atan2(moveDirection.x, moveDirection.z) * Mathf.Rad2Deg;
             angle = Mathf.Round(angle / 45f) * 45f;
             moveDirection = Quaternion.Euler(0f, angle, 0f) * Vector3.forward;
 
-            // Reset timer if direction changes
             if (Vector3.Dot(moveDirection, LastMoveDirection) < 0.9f)
                 moveTimer = 0f;
 
@@ -110,7 +127,13 @@ public class Movement : MonoBehaviour
 
             moveTimer += Time.fixedDeltaTime;
 
-            float targetSpeed = (moveTimer >= timeToRun) ? runSpeed : walkSpeed;
+            float targetSpeed;
+
+            if (isRunButtonHeld)
+                targetSpeed = runSpeed;
+            else
+                targetSpeed = (moveTimer >= timeToRun) ? runSpeed : walkSpeed;
+
             Vector3 targetVelocity = moveDirection * targetSpeed;
 
             horizontalVel = Vector3.MoveTowards(
@@ -119,11 +142,13 @@ public class Movement : MonoBehaviour
                 deceleration * Time.fixedDeltaTime
             );
 
-            // Rotate to face movement direction
             Quaternion targetRotation = Quaternion.LookRotation(moveDirection, Vector3.up);
             rb.MoveRotation(
                 Quaternion.Slerp(rb.rotation, targetRotation, rotationSpeed * Time.fixedDeltaTime)
             );
+
+            // ANIMATOR — movement speed value
+            animator.SetFloat("Speed", horizontalVel.magnitude);
         }
         else
         {
@@ -134,6 +159,9 @@ public class Movement : MonoBehaviour
                 Vector3.zero,
                 deceleration * Time.fixedDeltaTime
             );
+
+            // ANIMATOR — idle
+            animator.SetFloat("Speed", 0f);
         }
 
         rb.linearVelocity = new Vector3(
