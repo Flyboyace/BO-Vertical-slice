@@ -61,7 +61,8 @@ public class Movement : MonoBehaviour
             moveTimer = 0f;
 
             // ANIMATOR — stop movement animations
-            animator.SetFloat("Speed", 0f);
+            //animator.SetFloat("Speed", 0f);
+            animator.SetFloat("Speed", 10f);
             animator.SetBool("IsGrounded", IsGrounded());
             return;
         }
