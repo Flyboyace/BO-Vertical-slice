@@ -1,36 +1,45 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
-public class CoinPickup : MonoBehaviour
+public class Pickup : MonoBehaviour
 {
-    [SerializeField] private int coins;
-    [SerializeField] private int greenStar;
-    void Start()
+    [Header("Pickup Settings")]
+    public int value = 1;
+    public bool rotate = true;
+    public float rotateSpeed = 60f;
+
+    [Header("Effects")]
+    public AudioClip pickupSound;
+    public GameObject pickupEffect;
+
+    private static int totalPickedUp = 0;
+
+    void Update()
     {
-        
-    }
-    void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.tag == "Coin")
+        if (rotate)
         {
-            AddCoins();
-            Destroy(collision.gameObject);
-        }
-        if (collision.gameObject.tag == "GreenStar")
-        {
-         //TBD   
+            transform.Rotate(0, rotateSpeed * Time.deltaTime, 0);
         }
     }
 
-    private void AddCoins()
+    private void OnTriggerEnter(Collider other)
     {
-        coins += 1;
-        Debug.Log("Coin count updated: " + coins);
-    }
-    private void GreenStar()
-    { 
-       //TBD 
+        if (other.CompareTag("Player"))
+        {
+            totalPickedUp += value;
+
+            Debug.Log("Picked up: " + value + " | Total: " + totalPickedUp);
+
+            if (pickupSound != null)
+            {
+                AudioSource.PlayClipAtPoint(pickupSound, transform.position);
+            }
+
+            if (pickupEffect != null)
+            {
+                Instantiate(pickupEffect, transform.position, Quaternion.identity);
+            }
+
+            Destroy(gameObject);
+        }
     }
 }
-
- 
