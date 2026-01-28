@@ -765,18 +765,6 @@ PrefabInstance:
       value: -28.174004
       objectReference: {fileID: 0}
     - target: {fileID: 2830319951660678827, guid: f42315783dc5b9b4299bf2575b045bbf, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.03
-      objectReference: {fileID: 0}
-    - target: {fileID: 2830319951660678827, guid: f42315783dc5b9b4299bf2575b045bbf, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -1.265
-      objectReference: {fileID: 0}
-    - target: {fileID: 2830319951660678827, guid: f42315783dc5b9b4299bf2575b045bbf, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.04
-      objectReference: {fileID: 0}
-    - target: {fileID: 2830319951660678827, guid: f42315783dc5b9b4299bf2575b045bbf, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: -89.98021
       objectReference: {fileID: 0}
@@ -856,10 +844,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: konijn
       objectReference: {fileID: 0}
-    - target: {fileID: 5817618270625526927, guid: f42315783dc5b9b4299bf2575b045bbf, type: 3}
-      propertyPath: m_TagString
-      value: TriggerAnim
-      objectReference: {fileID: 0}
     - target: {fileID: 6183255328492128406, guid: f42315783dc5b9b4299bf2575b045bbf, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 3.7980544e-17
@@ -898,15 +882,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6626910868208922165, guid: f42315783dc5b9b4299bf2575b045bbf, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 572.48
+      value: 572.05206
       objectReference: {fileID: 0}
     - target: {fileID: 6626910868208922165, guid: f42315783dc5b9b4299bf2575b045bbf, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 158.74
+      value: 151.9
       objectReference: {fileID: 0}
     - target: {fileID: 6626910868208922165, guid: f42315783dc5b9b4299bf2575b045bbf, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -73.48
+      value: -74.675934
       objectReference: {fileID: 0}
     - target: {fileID: 6626910868208922165, guid: f42315783dc5b9b4299bf2575b045bbf, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1035,13 +1019,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5817618270625526927, guid: f42315783dc5b9b4299bf2575b045bbf, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 537664703}
-    - targetCorrespondingSourceObject: {fileID: 5817618270625526927, guid: f42315783dc5b9b4299bf2575b045bbf, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 537664707}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f42315783dc5b9b4299bf2575b045bbf, type: 3}
 --- !u!1001 &256986610
 PrefabInstance:
@@ -2252,44 +2230,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 460388ea49ec4af4e857edbb61e8205c, type: 3}
---- !u!1 &537664701 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5817618270625526927, guid: f42315783dc5b9b4299bf2575b045bbf, type: 3}
-  m_PrefabInstance: {fileID: 247382351}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &537664703
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 537664701}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd88a06434c86114db7a9aafa183710d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayOnTouch
---- !u!65 &537664707
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 537664701}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 3, y: 3, z: 3}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &549950930
 GameObject:
   m_ObjectHideFlags: 0

@@ -23,7 +23,6 @@ public class Movement : MonoBehaviour
     private CatWallClimb climb;
     private CatDive dive;
 
-    // ANIMATOR
     private Animator animator;
 
     private Vector3 input;
@@ -43,8 +42,6 @@ public class Movement : MonoBehaviour
         gp = GetComponent<GroundPound>();
         climb = GetComponent<CatWallClimb>();
         dive = GetComponent<CatDive>();
-
-        // ANIMATOR
         animator = GetComponent<Animator>();
 
         rb.freezeRotation = true;
@@ -53,6 +50,8 @@ public class Movement : MonoBehaviour
 
     private void Update()
     {
+        bool grounded = IsGrounded();
+
         if (gp.IsGroundPounding ||
             climb.IsClimbing ||
             (dive != null && (dive.IsFreezing || dive.IsDiving)))
@@ -60,10 +59,9 @@ public class Movement : MonoBehaviour
             input = Vector3.zero;
             moveTimer = 0f;
 
-            // ANIMATOR — stop movement animations
-            //animator.SetFloat("Speed", 0f);
-            animator.SetFloat("Speed", 10f);
-            animator.SetBool("IsGrounded", IsGrounded());
+            animator.SetFloat("Speed", 0f);
+            animator.SetBool("IsGrounded", grounded);
+            animator.SetBool("IsJumping", !grounded);
             return;
         }
 
@@ -80,7 +78,7 @@ public class Movement : MonoBehaviour
         isRunButtonHeld = Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift);
 
         // Jump
-        if (Input.GetKeyDown(KeyCode.Space) && IsGrounded())
+        if (Input.GetKeyDown(KeyCode.Space) && grounded)
         {
             rb.linearVelocity = new Vector3(rb.linearVelocity.x, 0f, rb.linearVelocity.z);
             rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
@@ -88,8 +86,8 @@ public class Movement : MonoBehaviour
             isJumping = true;
             jumpHoldTimer = 0f;
 
-            // ANIMATOR — jump trigger
             animator.SetTrigger("Jump");
+            animator.SetBool("IsJumping", true);
         }
 
         if (Input.GetKeyUp(KeyCode.Space))
@@ -97,9 +95,14 @@ public class Movement : MonoBehaviour
             isJumping = false;
         }
 
-        // ANIMATOR — send grounded & falling status
-        animator.SetBool("IsGrounded", IsGrounded());
+        // Animator states
+        animator.SetBool("IsGrounded", grounded);
         animator.SetBool("IsFalling", rb.linearVelocity.y < -0.1f);
+
+        if (grounded && rb.linearVelocity.y <= 0f)
+        {
+            animator.SetBool("IsJumping", false);
+        }
     }
 
     private void FixedUpdate()
@@ -125,15 +128,11 @@ public class Movement : MonoBehaviour
                 moveTimer = 0f;
 
             LastMoveDirection = moveDirection;
-
             moveTimer += Time.fixedDeltaTime;
 
-            float targetSpeed;
-
-            if (isRunButtonHeld)
-                targetSpeed = runSpeed;
-            else
-                targetSpeed = (moveTimer >= timeToRun) ? runSpeed : walkSpeed;
+            float targetSpeed = isRunButtonHeld
+                ? runSpeed
+                : (moveTimer >= timeToRun ? runSpeed : walkSpeed);
 
             Vector3 targetVelocity = moveDirection * targetSpeed;
 
@@ -148,7 +147,6 @@ public class Movement : MonoBehaviour
                 Quaternion.Slerp(rb.rotation, targetRotation, rotationSpeed * Time.fixedDeltaTime)
             );
 
-            // ANIMATOR — movement speed value
             animator.SetFloat("Speed", horizontalVel.magnitude);
         }
         else
@@ -161,15 +159,10 @@ public class Movement : MonoBehaviour
                 deceleration * Time.fixedDeltaTime
             );
 
-            // ANIMATOR — idle
             animator.SetFloat("Speed", 0f);
         }
 
-        rb.linearVelocity = new Vector3(
-            horizontalVel.x,
-            rb.linearVelocity.y,
-            horizontalVel.z
-        );
+        rb.linearVelocity = new Vector3(horizontalVel.x, rb.linearVelocity.y, horizontalVel.z);
 
         // Variable jump height
         if (isJumping && Input.GetKey(KeyCode.Space))
@@ -184,17 +177,13 @@ public class Movement : MonoBehaviour
         // Gravity tweaks
         if (rb.linearVelocity.y < 0f)
         {
-            rb.AddForce(
-                Vector3.up * Physics.gravity.y * (fallGravityMultiplier - 1f),
-                ForceMode.Acceleration
-            );
+            rb.AddForce(Vector3.up * Physics.gravity.y * (fallGravityMultiplier - 1f),
+                ForceMode.Acceleration);
         }
         else if (rb.linearVelocity.y > 0f && !Input.GetKey(KeyCode.Space))
         {
-            rb.AddForce(
-                Vector3.up * Physics.gravity.y * (lowJumpGravityMultiplier - 1f),
-                ForceMode.Acceleration
-            );
+            rb.AddForce(Vector3.up * Physics.gravity.y * (lowJumpGravityMultiplier - 1f),
+                ForceMode.Acceleration);
         }
     }
 
